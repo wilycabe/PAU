@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaLogica.Clases;
 
 namespace CapaLogica
 {
@@ -10,6 +11,7 @@ namespace CapaLogica
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
