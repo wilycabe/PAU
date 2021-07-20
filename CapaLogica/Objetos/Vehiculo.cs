@@ -20,14 +20,19 @@ namespace CapaLogica.Objetos
             Placa = string.Empty;
             Marca = string.Empty;
             Color = string.Empty;
+            Modelo = string.Empty;
+            Agno = int.MinValue;
         }
 
-        public Vehiculo(string cedulaChofer, string placa, string marca, string color)
+        public Vehiculo(string cedulaChofer, string placa, string marca, string color, string modelo, int agno)
         {
             CedulaChofer = cedulaChofer;
             Placa = placa;
             Marca = marca;
             Color = color;
+            Marca = marca;
+            Modelo = modelo;
+            Agno = agno;
         }
 
         public static bool ValidarPlaca(string placa)
