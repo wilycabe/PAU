@@ -1,13 +1,13 @@
-﻿namespace CapaLogica.Clases
+﻿namespace CapaLogica.Personas
 {
-    class Cedula
+    internal class Cedula
     {
 
         internal static bool VerificaIdentificacion(string identificacion)
         {
             if (identificacion.Length < 10) return false;
             var valced = identificacion.Trim().ToCharArray();
-            var provincia = int.Parse((valced[0].ToString() + valced[1].ToString()));
+            var provincia = int.Parse((valced[0] + valced[1].ToString()));
             if (provincia <= 0 || provincia >= 25) return false;
             var estado = false;
             if (int.Parse(valced[2].ToString()) < 6)

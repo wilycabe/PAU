@@ -1,0 +1,10 @@
+C:\Users\lives\source\repos\wilycabe\PAU\Consola de pruebas\bin\Debug\Consola de pruebas.exe.config
+C:\Users\lives\source\repos\wilycabe\PAU\Consola de pruebas\bin\Debug\Consola de pruebas.exe
+C:\Users\lives\source\repos\wilycabe\PAU\Consola de pruebas\bin\Debug\Consola de pruebas.pdb
+C:\Users\lives\source\repos\wilycabe\PAU\Consola de pruebas\bin\Debug\CapaLogica.dll
+C:\Users\lives\source\repos\wilycabe\PAU\Consola de pruebas\bin\Debug\CapaLogica.pdb
+C:\Users\lives\source\repos\wilycabe\PAU\Consola de pruebas\obj\Debug\Consola de pruebas.csproj.AssemblyReference.cache
+C:\Users\lives\source\repos\wilycabe\PAU\Consola de pruebas\obj\Debug\Consola de pruebas.csproj.CoreCompileInputs.cache
+C:\Users\lives\source\repos\wilycabe\PAU\Consola de pruebas\obj\Debug\Consola de pruebas.csproj.CopyComplete
+C:\Users\lives\source\repos\wilycabe\PAU\Consola de pruebas\obj\Debug\Consola de pruebas.exe
+C:\Users\lives\source\repos\wilycabe\PAU\Consola de pruebas\obj\Debug\Consola de pruebas.pdb
