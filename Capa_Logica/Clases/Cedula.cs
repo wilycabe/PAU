@@ -1,6 +1,6 @@
 ﻿namespace CapaLogica.Clases
 {
-    class Cedula
+    internal class Cedula
     {
 
         internal static bool VerificaIdentificacion(string identificacion)

@@ -1,0 +1,6 @@
+C:\Users\lives\source\repos\wilycabe\PAU\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\lives\source\repos\wilycabe\PAU\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\lives\source\repos\wilycabe\PAU\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\lives\source\repos\wilycabe\PAU\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\lives\source\repos\wilycabe\PAU\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\lives\source\repos\wilycabe\PAU\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache

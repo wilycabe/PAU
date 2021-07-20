@@ -3,15 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CapaLogica.Clases;
 
-namespace CapaLogica
+namespace CapaLogica.Clases
 {
-    class Program
+    class Destinatario : Persona
     {
-        static void Main(string[] args)
-        {
-
-        }
     }
 }

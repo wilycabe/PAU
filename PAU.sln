@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaLogica", "CapaLogica\CapaLogica.csproj", "{5DAE9FD5-93A8-4635-B81A-83E7245E56A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaLogica", "CapaLogica\CapaLogica.csproj", "{3371A155-2A0D-4DB2-AB56-28A1DE23DFFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consola de pruebas", "Consola de pruebas\Consola de pruebas.csproj", "{F66F4EB9-4887-446E-B09E-DAB9BD5D6E52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5DAE9FD5-93A8-4635-B81A-83E7245E56A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5DAE9FD5-93A8-4635-B81A-83E7245E56A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5DAE9FD5-93A8-4635-B81A-83E7245E56A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5DAE9FD5-93A8-4635-B81A-83E7245E56A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3371A155-2A0D-4DB2-AB56-28A1DE23DFFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3371A155-2A0D-4DB2-AB56-28A1DE23DFFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3371A155-2A0D-4DB2-AB56-28A1DE23DFFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3371A155-2A0D-4DB2-AB56-28A1DE23DFFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F66F4EB9-4887-446E-B09E-DAB9BD5D6E52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F66F4EB9-4887-446E-B09E-DAB9BD5D6E52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F66F4EB9-4887-446E-B09E-DAB9BD5D6E52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F66F4EB9-4887-446E-B09E-DAB9BD5D6E52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
