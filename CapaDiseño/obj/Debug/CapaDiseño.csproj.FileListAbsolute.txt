@@ -88,3 +88,5 @@ C:\Users\PC\Source\Repos\wilycabe\PAU\CapaDiseño\obj\Debug\CapaDiseño.csproj.C
 C:\Users\PC\Source\Repos\wilycabe\PAU\CapaDiseño\obj\Debug\CapaDiseño.exe
 C:\Users\PC\Source\Repos\wilycabe\PAU\CapaDiseño\obj\Debug\CapaDiseño.pdb
 C:\Users\PC\Source\Repos\wilycabe\PAU\CapaDiseño\obj\Debug\CapaDiseño.CuadroLogin.resources
+C:\Users\PC\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\CapaLogica.dll
+C:\Users\PC\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\CapaLogica.pdb

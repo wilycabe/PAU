@@ -258,5 +258,11 @@
   <ItemGroup>
     <None Include="Resources\Minimize_Icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Desktop\CapaLogica\CapaLogica.csproj">
+      <Project>{3371a155-2a0d-4db2-ab56-28a1de23dffc}</Project>
+      <Name>CapaLogica</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

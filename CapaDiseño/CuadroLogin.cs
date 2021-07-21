@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaLogica.Personas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,6 +52,22 @@ namespace CapaDiseño
                 txtUser.Text = "Contraseña";
                 txtUser.ForeColor = Color.DimGray;
                 txtPass.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                try
+                {
+                    Usuario.VerificarNick(txtUser.Text);
+
+                }
+                catch(ArgumentException)
+                {
+                    MessageBox.Show("El nombre de usuario solo admite números y letras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

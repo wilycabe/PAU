@@ -96,6 +96,7 @@ namespace CapaDiseño
             this.txtUser.TabIndex = 6;
             this.txtUser.Text = "Usuario";
             this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
+            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
             this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
             // 
             // bunifuSeparator1
