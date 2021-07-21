@@ -1,0 +1,13 @@
+C:\Users\USER\source\repos\wilycabe\PAU\ConsoleApp1\bin\Debug\PAU.mdf
+C:\Users\USER\source\repos\wilycabe\PAU\ConsoleApp1\bin\Debug\PAU_log.ldf
+C:\Users\USER\source\repos\wilycabe\PAU\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\USER\source\repos\wilycabe\PAU\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\USER\source\repos\wilycabe\PAU\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\USER\source\repos\wilycabe\PAU\ConsoleApp1\bin\Debug\CapaBase.dll
+C:\Users\USER\source\repos\wilycabe\PAU\ConsoleApp1\bin\Debug\CapaBase.pdb
+C:\Users\USER\source\repos\wilycabe\PAU\ConsoleApp1\bin\Debug\CapaBase.dll.config
+C:\Users\USER\source\repos\wilycabe\PAU\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\wilycabe\PAU\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\wilycabe\PAU\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
+C:\Users\USER\source\repos\wilycabe\PAU\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\USER\source\repos\wilycabe\PAU\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
