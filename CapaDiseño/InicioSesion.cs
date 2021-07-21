@@ -79,21 +79,25 @@ namespace CapaDiseño
 
         private void InicioSesion_Load(object sender, EventArgs e)
         {
-
+            CuadroLogin objNuevoUser = new CuadroLogin();
+            objNuevoUser.TopLevel = false;
+            objNuevoUser.Dock = DockStyle.Fill;
+            panel3.Controls.Add(objNuevoUser);
+            panel3.Tag = objNuevoUser;
+            objNuevoUser.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            if (panel3.Controls.Count>0)
+            foreach(Form Login in panel3.Controls)
             {
-                panel3.Controls.RemoveAt(0);
+                panel3.Controls.Remove(Login);
             }
             objNuevoUser.TopLevel = false;
             objNuevoUser.Dock = DockStyle.Fill;
             panel3.Controls.Add(objNuevoUser);
             panel3.Tag = objNuevoUser;
-            objNuevoUser.ShowDialog();
+            objNuevoUser.Show();
         }
 
         private void bunifuSeparator2_Load(object sender, EventArgs e)
@@ -106,48 +110,26 @@ namespace CapaDiseño
 
         }
 
-        private void txtUser_Enter_1(object sender, EventArgs e)
-        {
-            if (txtUser.Text == "Usuario")
-            {
-                txtUser.Text = "";
-                txtUser.ForeColor = Color.LightGray;
-            }
-        }
-
-        private void txtUser_Leave_1(object sender, EventArgs e)
-        {
-            if (txtUser.Text == "")
-            {
-                txtUser.Text = "Usuario";
-                txtUser.ForeColor = Color.DimGray;
-            }
-        }
-
-        private void txtPass_Enter_1(object sender, EventArgs e)
-        {
-            if (txtPass.Text == "Contraseña")
-            {
-                txtPass.Text = "";
-                txtPass.ForeColor = Color.LightGray;
-                txtPass.UseSystemPasswordChar = true;
-            }
-        }
-
-        private void txtPass_Leave_1(object sender, EventArgs e)
-        {
-            if (txtUser.Text == "")
-            {
-                txtUser.Text = "Contraseña";
-                txtUser.ForeColor = Color.DimGray;
-                txtPass.UseSystemPasswordChar = true;
-            }
-        }
+       
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
             PantallaPrincipal objPrin = new PantallaPrincipal();
             objPrin.ShowDialog();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            foreach (Form Login in panel3.Controls)
+            {
+                panel3.Controls.Remove(Login);
+            }
+            CuadroLogin objNuevoUser = new CuadroLogin();
+            objNuevoUser.TopLevel = false;
+            objNuevoUser.Dock = DockStyle.Fill;
+            panel3.Controls.Add(objNuevoUser);
+            panel3.Tag = objNuevoUser;
+            objNuevoUser.Show();
         }
     }
 }
