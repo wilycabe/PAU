@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEBE5E42-4A4B-4E12-B8B6-78BAFF68E13D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CapaDiseño</RootNamespace>
+    <AssemblyName>CapaDiseño</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Viajes\AgendaDeViaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viajes\AgendaDeViaje.Designer.cs">
+      <DependentUpon>AgendaDeViaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viajes\AgendarViaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viajes\AgendarViaje.Designer.cs">
+      <DependentUpon>AgendarViaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\BuscarDatosCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\BuscarDatosCliente.Designer.cs">
+      <DependentUpon>BuscarDatosCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Encomiendas\BuscarDatosEncomienda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Encomiendas\BuscarDatosEncomienda.Designer.cs">
+      <DependentUpon>BuscarDatosEncomienda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\BuscarDatosPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\BuscarDatosPersonal.Designer.cs">
+      <DependentUpon>BuscarDatosPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viajes\ContabilizarViaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viajes\ContabilizarViaje.Designer.cs">
+      <DependentUpon>ContabilizarViaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarUsuario.Designer.cs">
+      <DependentUpon>EliminarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInicio.Designer.cs">
+      <DependentUpon>FormInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FormReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReportes.Designer.cs">
+      <DependentUpon>FormReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\IngresarDatosCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\IngresarDatosCliente.Designer.cs">
+      <DependentUpon>IngresarDatosCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Encomiendas\IngresarDatosEncomienda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Encomiendas\IngresarDatosEncomienda.Designer.cs">
+      <DependentUpon>IngresarDatosEncomienda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\IngresarDatosPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\IngresarDatosPersonal.Designer.cs">
+      <DependentUpon>IngresarDatosPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioSesion.Designer.cs">
+      <DependentUpon>InicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\ModificarDatosCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\ModificarDatosCliente.Designer.cs">
+      <DependentUpon>ModificarDatosCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Encomiendas\ModificarDatosEncomienda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Encomiendas\ModificarDatosEncomienda.Designer.cs">
+      <DependentUpon>ModificarDatosEncomienda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\ModificarDatosPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\ModificarDatosPersonal.Designer.cs">
+      <DependentUpon>ModificarDatosPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoUsuario.Designer.cs">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaPrincipal.Designer.cs">
+      <DependentUpon>PantallaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Clientes\BuscarDatosCliente.resx">
+      <DependentUpon>BuscarDatosCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\IngresarDatosCliente.resx">
+      <DependentUpon>IngresarDatosCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\ModificarDatosCliente.resx">
+      <DependentUpon>ModificarDatosCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarUsuario.resx">
+      <DependentUpon>EliminarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Encomiendas\BuscarDatosEncomienda.resx">
+      <DependentUpon>BuscarDatosEncomienda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Encomiendas\IngresarDatosEncomienda.resx">
+      <DependentUpon>IngresarDatosEncomienda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Encomiendas\ModificarDatosEncomienda.resx">
+      <DependentUpon>ModificarDatosEncomienda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInicio.resx">
+      <DependentUpon>FormInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoUsuario.resx">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personal\BuscarDatosPersonal.resx">
+      <DependentUpon>BuscarDatosPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personal\IngresarDatosPersonal.resx">
+      <DependentUpon>IngresarDatosPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personal\ModificarDatosPersonal.resx">
+      <DependentUpon>ModificarDatosPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FormReportes.resx">
+      <DependentUpon>FormReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioSesion.resx">
+      <DependentUpon>InicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaPrincipal.resx">
+      <DependentUpon>PantallaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Viajes\AgendaDeViaje.resx">
+      <DependentUpon>AgendaDeViaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viajes\AgendarViaje.resx">
+      <DependentUpon>AgendarViaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viajes\ContabilizarViaje.resx">
+      <DependentUpon>ContabilizarViaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize_Icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

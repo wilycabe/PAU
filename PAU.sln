@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{831E8A16-EB06-4E78-A46C-9669F151FACC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDiseño", "CapaDiseño\CapaDiseño.csproj", "{BEBE5E42-4A4B-4E12-B8B6-78BAFF68E13D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{831E8A16-EB06-4E78-A46C-9669F151FACC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{831E8A16-EB06-4E78-A46C-9669F151FACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{831E8A16-EB06-4E78-A46C-9669F151FACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{831E8A16-EB06-4E78-A46C-9669F151FACC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEBE5E42-4A4B-4E12-B8B6-78BAFF68E13D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEBE5E42-4A4B-4E12-B8B6-78BAFF68E13D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEBE5E42-4A4B-4E12-B8B6-78BAFF68E13D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEBE5E42-4A4B-4E12-B8B6-78BAFF68E13D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {624B1707-AA7E-408D-878B-2ABC4CBA75D6}
+	EndGlobalSection
+EndGlobal
