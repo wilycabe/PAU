@@ -1,0 +1,7 @@
+C:\Users\lives\source\repos\wilycabe\PAU\CapaBasePruebas\bin\Debug\CapaBasePruebas.exe.config
+C:\Users\lives\source\repos\wilycabe\PAU\CapaBasePruebas\bin\Debug\CapaBasePruebas.exe
+C:\Users\lives\source\repos\wilycabe\PAU\CapaBasePruebas\bin\Debug\CapaBasePruebas.pdb
+C:\Users\lives\source\repos\wilycabe\PAU\CapaBasePruebas\obj\Debug\CapaBasePruebas.csproj.AssemblyReference.cache
+C:\Users\lives\source\repos\wilycabe\PAU\CapaBasePruebas\obj\Debug\CapaBasePruebas.csproj.CoreCompileInputs.cache
+C:\Users\lives\source\repos\wilycabe\PAU\CapaBasePruebas\obj\Debug\CapaBasePruebas.exe
+C:\Users\lives\source\repos\wilycabe\PAU\CapaBasePruebas\obj\Debug\CapaBasePruebas.pdb

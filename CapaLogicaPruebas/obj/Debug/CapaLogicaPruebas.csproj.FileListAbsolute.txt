@@ -1,0 +1,7 @@
+C:\Users\lives\source\repos\wilycabe\PAU\CapaLogicaPruebas\bin\Debug\CapaLogicaPruebas.exe.config
+C:\Users\lives\source\repos\wilycabe\PAU\CapaLogicaPruebas\bin\Debug\CapaLogicaPruebas.exe
+C:\Users\lives\source\repos\wilycabe\PAU\CapaLogicaPruebas\bin\Debug\CapaLogicaPruebas.pdb
+C:\Users\lives\source\repos\wilycabe\PAU\CapaLogicaPruebas\obj\Debug\CapaLogicaPruebas.csproj.AssemblyReference.cache
+C:\Users\lives\source\repos\wilycabe\PAU\CapaLogicaPruebas\obj\Debug\CapaLogicaPruebas.csproj.CoreCompileInputs.cache
+C:\Users\lives\source\repos\wilycabe\PAU\CapaLogicaPruebas\obj\Debug\CapaLogicaPruebas.exe
+C:\Users\lives\source\repos\wilycabe\PAU\CapaLogicaPruebas\obj\Debug\CapaLogicaPruebas.pdb
