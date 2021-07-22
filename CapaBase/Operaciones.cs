@@ -119,7 +119,7 @@ namespace CapaBase
             objConec.Cerrar();
         }
 
-        #region esto necedita la capa logica
+        #region esto necesitamos la capa logica
         
         // regresa la una tabla con los datos del usuario con un nick en espeficifico
         public static DataTable ExisteUsuario(string nick)
@@ -141,6 +141,49 @@ namespace CapaBase
             }
         }
 
+        public static bool ValidadUsuarioContrasena(string usuario, string contrasena)
+        {
+            try
+            {
+                var sentencia = "" +
+                                "SELECT * FROM usuario " +
+                                "WHERE id_usuario = '" + usuario + "' " +
+                                "AND contrasena_usuario = '" + contrasena + "'";
+                var tabla = new DataTable();
+                var conexion = new SqlCommand(sentencia, objConec.Conectar);
+                var adaptador = new SqlDataAdapter(conexion);
+                adaptador.Fill(tabla);
+                tabla.AcceptChanges();
+                return tabla.Rows.Count > 0;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public static void AnadirUsuarioBaseDatos(string cedula, string nombre, string apellido, string celular, string correo, string direccion, string nick, string contrasena )
+        {
+            try
+            {
+                var sentencia = "" +
+                                "INSERT INTO usuarios " +
+                                "VALUES('" + cedula + "', " +
+                                "'" + nombre + "', " +
+                                "'" + apellido + "', " +
+                                "'" + celular + "', " +
+                                "'" + correo + "', " +
+                                "'" + direccion + "', " +
+                                "'" + nick + "', " +
+                                "'" + contrasena + "')";
+                var conexion = new SqlCommand(sentencia, objConec.Conectar);
+                conexion.ExecuteNonQuery();
+            }
+            catch
+            {
+                //
+            }
+        }
 
         #endregion
 

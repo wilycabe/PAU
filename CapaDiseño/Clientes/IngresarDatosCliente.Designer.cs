@@ -55,9 +55,10 @@ namespace CapaDiseño
             this.txtCelular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(223)))), ((int)(((byte)(145)))));
             this.txtCelular.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCelular.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCelular.Location = new System.Drawing.Point(221, 360);
+            this.txtCelular.Location = new System.Drawing.Point(166, 292);
+            this.txtCelular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(221, 15);
+            this.txtCelular.Size = new System.Drawing.Size(166, 13);
             this.txtCelular.TabIndex = 93;
             // 
             // txtFechaNaci
@@ -65,18 +66,20 @@ namespace CapaDiseño
             this.txtFechaNaci.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(223)))), ((int)(((byte)(145)))));
             this.txtFechaNaci.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFechaNaci.ForeColor = System.Drawing.Color.DimGray;
-            this.txtFechaNaci.Location = new System.Drawing.Point(586, 370);
+            this.txtFechaNaci.Location = new System.Drawing.Point(440, 301);
+            this.txtFechaNaci.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFechaNaci.Name = "txtFechaNaci";
-            this.txtFechaNaci.Size = new System.Drawing.Size(221, 15);
+            this.txtFechaNaci.Size = new System.Drawing.Size(166, 13);
             this.txtFechaNaci.TabIndex = 92;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(156, 279);
+            this.label6.Location = new System.Drawing.Point(117, 227);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 17);
+            this.label6.Size = new System.Drawing.Size(58, 13);
             this.label6.TabIndex = 81;
             this.label6.Text = "Direccion :";
             // 
@@ -84,9 +87,10 @@ namespace CapaDiseño
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(156, 370);
+            this.label5.Location = new System.Drawing.Point(117, 301);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 17);
+            this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 80;
             this.label5.Text = "Celular :";
             // 
@@ -94,9 +98,10 @@ namespace CapaDiseño
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(156, 195);
+            this.label4.Location = new System.Drawing.Point(117, 158);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 17);
+            this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 79;
             this.label4.Text = "Cedula  :";
             // 
@@ -104,9 +109,10 @@ namespace CapaDiseño
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(154, 101);
+            this.label3.Location = new System.Drawing.Point(116, 82);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 78;
             this.label3.Text = "Apellido :";
             // 
@@ -114,9 +120,10 @@ namespace CapaDiseño
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(154, 26);
+            this.label2.Location = new System.Drawing.Point(116, 21);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 17);
+            this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 77;
             this.label2.Text = "Nombre :";
             // 
@@ -124,29 +131,33 @@ namespace CapaDiseño
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(448, 370);
+            this.label1.Location = new System.Drawing.Point(336, 301);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 17);
+            this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 76;
             this.label1.Text = "Fecha nacimiento :";
             // 
             // bntIngresar
             // 
-            this.bntIngresar.Location = new System.Drawing.Point(501, 481);
+            this.bntIngresar.Location = new System.Drawing.Point(376, 391);
+            this.bntIngresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bntIngresar.Name = "bntIngresar";
-            this.bntIngresar.Size = new System.Drawing.Size(135, 37);
+            this.bntIngresar.Size = new System.Drawing.Size(101, 30);
             this.bntIngresar.TabIndex = 69;
             this.bntIngresar.Text = "Guardar";
             this.bntIngresar.UseVisualStyleBackColor = true;
+            this.bntIngresar.Click += new System.EventHandler(this.bntIngresar_Click);
             // 
             // txtDireccion
             // 
             this.txtDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(223)))), ((int)(((byte)(145)))));
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDireccion.ForeColor = System.Drawing.Color.DimGray;
-            this.txtDireccion.Location = new System.Drawing.Point(272, 279);
+            this.txtDireccion.Location = new System.Drawing.Point(204, 227);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(221, 15);
+            this.txtDireccion.Size = new System.Drawing.Size(166, 13);
             this.txtDireccion.TabIndex = 68;
             // 
             // txtCedula
@@ -154,9 +165,10 @@ namespace CapaDiseño
             this.txtCedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(223)))), ((int)(((byte)(145)))));
             this.txtCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCedula.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCedula.Location = new System.Drawing.Point(272, 195);
+            this.txtCedula.Location = new System.Drawing.Point(204, 158);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(221, 15);
+            this.txtCedula.Size = new System.Drawing.Size(166, 13);
             this.txtCedula.TabIndex = 67;
             // 
             // txtApellido
@@ -164,9 +176,10 @@ namespace CapaDiseño
             this.txtApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(223)))), ((int)(((byte)(145)))));
             this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellido.ForeColor = System.Drawing.Color.DimGray;
-            this.txtApellido.Location = new System.Drawing.Point(270, 101);
+            this.txtApellido.Location = new System.Drawing.Point(202, 82);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(221, 15);
+            this.txtApellido.Size = new System.Drawing.Size(166, 13);
             this.txtApellido.TabIndex = 66;
             // 
             // txtNombre
@@ -174,9 +187,10 @@ namespace CapaDiseño
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(223)))), ((int)(((byte)(145)))));
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNombre.Location = new System.Drawing.Point(270, 26);
+            this.txtNombre.Location = new System.Drawing.Point(202, 21);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(221, 15);
+            this.txtNombre.Size = new System.Drawing.Size(166, 13);
             this.txtNombre.TabIndex = 65;
             // 
             // bunifuSeparator1
@@ -184,10 +198,9 @@ namespace CapaDiseño
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(586, 370);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(440, 301);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(160, 43);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(120, 35);
             this.bunifuSeparator1.TabIndex = 70;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
@@ -197,10 +210,9 @@ namespace CapaDiseño
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(270, 26);
-            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(202, 21);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Size = new System.Drawing.Size(323, 43);
+            this.bunifuSeparator2.Size = new System.Drawing.Size(242, 35);
             this.bunifuSeparator2.TabIndex = 71;
             this.bunifuSeparator2.Transparency = 255;
             this.bunifuSeparator2.Vertical = false;
@@ -210,10 +222,9 @@ namespace CapaDiseño
             this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator3.LineThickness = 1;
-            this.bunifuSeparator3.Location = new System.Drawing.Point(270, 101);
-            this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator3.Location = new System.Drawing.Point(202, 82);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
-            this.bunifuSeparator3.Size = new System.Drawing.Size(323, 43);
+            this.bunifuSeparator3.Size = new System.Drawing.Size(242, 35);
             this.bunifuSeparator3.TabIndex = 72;
             this.bunifuSeparator3.Transparency = 255;
             this.bunifuSeparator3.Vertical = false;
@@ -223,10 +234,9 @@ namespace CapaDiseño
             this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator4.LineThickness = 1;
-            this.bunifuSeparator4.Location = new System.Drawing.Point(289, 195);
-            this.bunifuSeparator4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator4.Location = new System.Drawing.Point(217, 158);
             this.bunifuSeparator4.Name = "bunifuSeparator4";
-            this.bunifuSeparator4.Size = new System.Drawing.Size(222, 43);
+            this.bunifuSeparator4.Size = new System.Drawing.Size(166, 35);
             this.bunifuSeparator4.TabIndex = 73;
             this.bunifuSeparator4.Transparency = 255;
             this.bunifuSeparator4.Vertical = false;
@@ -236,10 +246,9 @@ namespace CapaDiseño
             this.bunifuSeparator5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator5.LineThickness = 1;
-            this.bunifuSeparator5.Location = new System.Drawing.Point(223, 360);
-            this.bunifuSeparator5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator5.Location = new System.Drawing.Point(167, 292);
             this.bunifuSeparator5.Name = "bunifuSeparator5";
-            this.bunifuSeparator5.Size = new System.Drawing.Size(116, 43);
+            this.bunifuSeparator5.Size = new System.Drawing.Size(87, 35);
             this.bunifuSeparator5.TabIndex = 74;
             this.bunifuSeparator5.Transparency = 255;
             this.bunifuSeparator5.Vertical = false;
@@ -249,20 +258,19 @@ namespace CapaDiseño
             this.bunifuSeparator6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator6.LineThickness = 1;
-            this.bunifuSeparator6.Location = new System.Drawing.Point(272, 279);
-            this.bunifuSeparator6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator6.Location = new System.Drawing.Point(204, 227);
             this.bunifuSeparator6.Name = "bunifuSeparator6";
-            this.bunifuSeparator6.Size = new System.Drawing.Size(239, 43);
+            this.bunifuSeparator6.Size = new System.Drawing.Size(179, 35);
             this.bunifuSeparator6.TabIndex = 75;
             this.bunifuSeparator6.Transparency = 255;
             this.bunifuSeparator6.Vertical = false;
             // 
             // IngresarDatosCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(223)))), ((int)(((byte)(145)))));
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.txtFechaNaci);
             this.Controls.Add(this.label6);
@@ -283,7 +291,6 @@ namespace CapaDiseño
             this.Controls.Add(this.bunifuSeparator5);
             this.Controls.Add(this.bunifuSeparator6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "IngresarDatosCliente";
             this.Text = "IngresarDatosCliente";
             this.ResumeLayout(false);

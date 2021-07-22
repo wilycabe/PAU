@@ -48,61 +48,71 @@ namespace CapaDiseño
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(78, 90);
+            this.label1.Location = new System.Drawing.Point(58, 73);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 17);
+            this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Buscar";
             // 
             // textBuscar
             // 
-            this.textBuscar.Location = new System.Drawing.Point(146, 90);
+            this.textBuscar.Location = new System.Drawing.Point(110, 73);
+            this.textBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBuscar.Name = "textBuscar";
-            this.textBuscar.Size = new System.Drawing.Size(570, 22);
+            this.textBuscar.Size = new System.Drawing.Size(428, 20);
             this.textBuscar.TabIndex = 1;
+            this.textBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBuscar_KeyPress);
             // 
             // dgvBuscarCliente
             // 
             this.dgvBuscarCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBuscarCliente.Location = new System.Drawing.Point(81, 165);
+            this.dgvBuscarCliente.Location = new System.Drawing.Point(61, 134);
+            this.dgvBuscarCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvBuscarCliente.Name = "dgvBuscarCliente";
             this.dgvBuscarCliente.RowHeadersWidth = 51;
             this.dgvBuscarCliente.RowTemplate.Height = 24;
-            this.dgvBuscarCliente.Size = new System.Drawing.Size(794, 150);
+            this.dgvBuscarCliente.Size = new System.Drawing.Size(596, 122);
             this.dgvBuscarCliente.TabIndex = 2;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(741, 90);
+            this.btnBuscar.Location = new System.Drawing.Point(556, 73);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(56, 19);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(294, 347);
+            this.btnEliminar.Location = new System.Drawing.Point(220, 282);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(122, 33);
+            this.btnEliminar.Size = new System.Drawing.Size(92, 27);
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(481, 347);
+            this.btnGuardar.Location = new System.Drawing.Point(361, 282);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(122, 33);
+            this.btnGuardar.Size = new System.Drawing.Size(92, 27);
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // BuscarDatosCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 501);
+            this.ClientSize = new System.Drawing.Size(699, 407);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnBuscar);
@@ -110,7 +120,6 @@ namespace CapaDiseño
             this.Controls.Add(this.textBuscar);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BuscarDatosCliente";
             this.Text = "BuscarDatosCliente";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarCliente)).EndInit();

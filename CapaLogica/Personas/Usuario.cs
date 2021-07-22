@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using CapaBase;
 
 namespace CapaLogica.Personas
 {
@@ -190,7 +191,7 @@ namespace CapaLogica.Personas
         public static bool ExisteUsuario(string usuario)
         {
             // Aun por desarrollar
-            return false;
+            return Operaciones.ExisteUsuario(usuario).Rows.Count != 0;
         }
 
         /// <summary>
