@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaBase;
 using CapaLogica.Personas;
 using CapaLogica.Objetos;
 using Operaciones = CapaLogica.Objetos.Operaciones;

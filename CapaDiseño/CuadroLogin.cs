@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaLogica.Objetos;
 
 namespace CapaDiseño
 {
@@ -68,6 +69,21 @@ namespace CapaDiseño
                 {
                     MessageBox.Show("El nombre de usuario solo admite números y letras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void btnAcceder_Click(object sender, EventArgs e)
+        {
+            string Usuario;
+            string Pass;
+            Usuario = txtUser.Text;
+            Pass = txtPass.Text;
+            Operaciones oObj = new Operaciones();
+            oObj.ConectarBaseDatos();
+            if (Operaciones.ValidadUsuarioContrasena(Usuario, Pass) == true)
+            {
+                PantallaPrincipal oPantalla = new PantallaPrincipal();
+                oPantalla.Show();
             }
         }
     }

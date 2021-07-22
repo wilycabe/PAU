@@ -12,8 +12,8 @@ namespace CapaBase
 {
     public class Operaciones
     {
-        static readonly Conexion objConec = new Conexion();
-        DataTable tabla = new DataTable();
+        private static readonly Conexion objConec = new Conexion();
+        private DataTable tabla = new DataTable();
 
         public DataTable MostrarEnc()
         {
