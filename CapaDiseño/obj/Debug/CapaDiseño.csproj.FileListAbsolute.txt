@@ -128,3 +128,8 @@ C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\CapaBasePruebas.p
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\CapaBasePruebas.exe.config
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\CapaLogicaPruebas.pdb
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\CapaLogicaPruebas.exe.config
+C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\PAU.mdf
+C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\PAU_log.ldf
+C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\CapaBase.dll
+C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\CapaBase.pdb
+C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\CapaBase.dll.config

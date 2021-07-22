@@ -5,3 +5,9 @@ C:\Users\lives\source\repos\wilycabe\PAU\CapaBasePruebas\obj\Debug\CapaBasePrueb
 C:\Users\lives\source\repos\wilycabe\PAU\CapaBasePruebas\obj\Debug\CapaBasePruebas.csproj.CoreCompileInputs.cache
 C:\Users\lives\source\repos\wilycabe\PAU\CapaBasePruebas\obj\Debug\CapaBasePruebas.exe
 C:\Users\lives\source\repos\wilycabe\PAU\CapaBasePruebas\obj\Debug\CapaBasePruebas.pdb
+C:\Users\lives\source\repos\wilycabe\PAU\CapaBasePruebas\bin\Debug\PAU.mdf
+C:\Users\lives\source\repos\wilycabe\PAU\CapaBasePruebas\bin\Debug\PAU_log.ldf
+C:\Users\lives\source\repos\wilycabe\PAU\CapaBasePruebas\bin\Debug\CapaBase.dll
+C:\Users\lives\source\repos\wilycabe\PAU\CapaBasePruebas\bin\Debug\CapaBase.pdb
+C:\Users\lives\source\repos\wilycabe\PAU\CapaBasePruebas\bin\Debug\CapaBase.dll.config
+C:\Users\lives\source\repos\wilycabe\PAU\CapaBasePruebas\obj\Debug\CapaBasePruebas.csproj.CopyComplete

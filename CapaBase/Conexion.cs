@@ -1,29 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
 using System.Configuration;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace CapaBase
 {
-   public class Conexion
+    public class Conexion
     {
-        public string Cadena = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\PAU.mdf;Integrated Security=True";//"Data Source=DESKTOP-HK8GGIP\\SQLEXPRESS; Initial Catalog=PAU;Integrated Security=true";
-        public SqlConnection conectar = new SqlConnection();
+        public string Cadena = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\PAU.mdf;Integrated Security=True;Connect Timeout=30";
+        public SqlConnection Conectar =  new();
+
         public Conexion() 
         {
-            conectar.ConnectionString = Cadena;
+            Conectar.ConnectionString = Cadena;
         }
-        public void abrir()
+
+        public void Abrir()
         {
             try
             {
-                conectar.Open();
-                MessageBox.Show("Conexion establecida");
+                Conectar.Open();
+                Console.WriteLine("Conexion exitosa a la base de datos PAU");
             }
             catch (Exception ex)
             {
@@ -31,9 +28,17 @@ namespace CapaBase
             }
         }
 
-        public void cerrar()
+        public void Cerrar()
         {
-            conectar.Close();
+            try
+            {
+                Conectar.Close();
+
+            }
+            catch (Exception)
+            {
+                // ignored
+            }
         }
     }
 }
