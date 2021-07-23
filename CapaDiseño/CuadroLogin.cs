@@ -74,17 +74,13 @@ namespace CapaDiseño
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            string Usuario;
-            string Pass;
-            Usuario = txtUser.Text;
-            Pass = txtPass.Text;
-            Operaciones oObj = new Operaciones();
+            var usuario = txtUser.Text;
+            var pass = txtPass.Text;
+            var oObj = new Operaciones();
             oObj.ConectarBaseDatos();
-            if (Operaciones.ValidadUsuarioContrasena(Usuario, Pass) == true)
-            {
-                PantallaPrincipal oPantalla = new PantallaPrincipal();
-                oPantalla.Show();
-            }
+            if (Operaciones.ValidadUsuarioContrasena(usuario, pass) != true) return;
+            var oPantalla = new PantallaPrincipal();
+            oPantalla.Show();
         }
     }
 }

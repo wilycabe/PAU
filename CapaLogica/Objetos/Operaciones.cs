@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -36,6 +37,21 @@ namespace CapaLogica.Objetos
                 usuario.UsuarioNombre,
                 usuario.Contrasena);
         }
+
+        #region Cliente
+
+        public static void AnadirCliente(Cliente cliente)
+        {
+            CapaBase.Operaciones.AnadirClienteBaseDatos(
+                cliente.Cedula,
+                cliente.Nombre,
+                cliente.Apellido,
+                cliente.Celular, 
+                cliente.Correo,
+                cliente.Direccion);
+        }
+
+        #endregion
 
     }
 }

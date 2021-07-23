@@ -185,6 +185,24 @@ namespace CapaBase
             }
         }
 
+        #region Cliente
+
+        public static void AnadirClienteBaseDatos(string cedula, string nombre, string apellido, string celular, string correo, string direccion)
+        {
+            var sentencia = "" +
+                            "INSERT INTO usuarios " +
+                            "VALUES('" + cedula + "', " +
+                            "'" + nombre + "', " +
+                            "'" + apellido + "', " +
+                            "'" + celular + "', " +
+                            "'" + correo + "', " +
+                            "'" + direccion + "')";
+            var conexion = new SqlCommand(sentencia, objConec.Conectar);
+            conexion.ExecuteNonQuery();
+        }
+
+        #endregion
+
         #endregion
 
     }
