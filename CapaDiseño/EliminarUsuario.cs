@@ -16,5 +16,10 @@ namespace CapaDiseño
         {
             InitializeComponent();
         }
+
+        private void EliminarUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

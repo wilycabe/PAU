@@ -3,7 +3,6 @@ C:\Users\lives\source\repos\wilycabe\PAU\CapaBase\bin\Debug\PAU_log.ldf
 C:\Users\lives\source\repos\wilycabe\PAU\CapaBase\bin\Debug\CapaBase.dll.config
 C:\Users\lives\source\repos\wilycabe\PAU\CapaBase\bin\Debug\CapaBase.dll
 C:\Users\lives\source\repos\wilycabe\PAU\CapaBase\bin\Debug\CapaBase.pdb
-C:\Users\lives\source\repos\wilycabe\PAU\CapaBase\obj\Debug\CapaBase.csproj.AssemblyReference.cache
 C:\Users\lives\source\repos\wilycabe\PAU\CapaBase\obj\Debug\CapaBase.csproj.CoreCompileInputs.cache
 C:\Users\lives\source\repos\wilycabe\PAU\CapaBase\obj\Debug\CapaBase.dll
 C:\Users\lives\source\repos\wilycabe\PAU\CapaBase\obj\Debug\CapaBase.pdb
@@ -16,3 +15,4 @@ C:\Users\USER\Source\Repos\wilycabe\PAU\CapaBase\obj\Debug\CapaBase.csproj.Assem
 C:\Users\USER\Source\Repos\wilycabe\PAU\CapaBase\obj\Debug\CapaBase.csproj.CoreCompileInputs.cache
 C:\Users\USER\Source\Repos\wilycabe\PAU\CapaBase\obj\Debug\CapaBase.dll
 C:\Users\USER\Source\Repos\wilycabe\PAU\CapaBase\obj\Debug\CapaBase.pdb
+C:\Users\lives\source\repos\wilycabe\PAU\CapaBase\obj\Debug\CapaBase.csproj.AssemblyReference.cache

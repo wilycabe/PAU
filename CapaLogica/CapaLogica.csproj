@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Objetos\Encomienda.cs" />
-    <Compile Include="Objetos\Operaciones.cs" />
+    <Compile Include="Objetos\OperacionesLl.cs" />
     <Compile Include="Objetos\Reservaciones.cs" />
     <Compile Include="Objetos\Vehiculo.cs" />
     <Compile Include="Personas\Cedula.cs" />

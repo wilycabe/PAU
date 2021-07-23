@@ -72,6 +72,14 @@ namespace CapaLogica.Personas
             set => base.Correo = value;
         }
 
+        public new string FechaNacimiento
+        {
+            // Retorna el correo almacenado en la herencia de la clase persona
+            get => base.FechaNacimineto;
+            // Asigna el valor del correo en la herencia de la clase persona
+            set => base.FechaNacimineto = value;
+        }
+
         /// <summary>
         /// Constructor de la clase cliente sin parametros de inicio
         /// </summary>

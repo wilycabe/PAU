@@ -1,34 +1,42 @@
-﻿namespace CapaLogica.Objetos
+﻿using System;
+
+namespace CapaLogica.Objetos
 {
     public class Encomienda
     {
 
         public string Codigo { get; set; }
-        public string Peso { get; set; }
+        public double Peso { get; set; }
         public string Descripcion { get; set; }
         public string FechaEnvio { get; set; }
         public string CodigoPostal { get; set; }
         public string CiudadEnvio { get; set; }
         public string CiudadLlegada { get; set; }
-        public string ValorEncomienda { get; set; }
+        public double ValorEncomienda { get; set; }
         public string CedulaCliente { get; set; }
         public string CedulaDestinatario { get; set; }
+        public string DireccionEnvio { get; set; }
+        public string DireccionLlegada { get; set; }
+        public string CedulaChofer { get; set; }
 
         public Encomienda()
         {
             Codigo = string.Empty;
-            Peso = string.Empty;
+            Peso = 0;
             Descripcion = string.Empty;
             FechaEnvio = string.Empty;
             CodigoPostal = string.Empty;
             CiudadEnvio = string.Empty;
+            DireccionEnvio = string.Empty;
             CiudadLlegada = string.Empty;
-            ValorEncomienda = string.Empty;
+            DireccionLlegada = string.Empty;
+            ValorEncomienda = 0;
             CedulaCliente = string.Empty;
             CedulaDestinatario = string.Empty;
+            CedulaChofer = string.Empty;
         }
 
-        public Encomienda(string codigo, string peso, string descripcion, string fechaEnvio, string codigoPostal, string ciudadEnvio, string ciudadLlegada, double valorEncomienda, string cedulaCliente, string cedulaDestinatario)
+        public Encomienda(string codigo, double peso, string descripcion, string fechaEnvio, string codigoPostal, string ciudadEnvio, string direccionEnvio, string ciudadLlegada, string direccionLlegada, double valorEncomienda, string cedulaCliente, string cedulaDestinatario, string cedulaChofer)
         {
             Codigo = codigo;
             Peso = peso;
@@ -36,10 +44,13 @@
             FechaEnvio = fechaEnvio;
             CodigoPostal = codigoPostal;
             CiudadEnvio = ciudadEnvio;
+            DireccionEnvio = direccionEnvio;
             CiudadLlegada = ciudadLlegada;
-            ValorEncomienda = valorEncomienda.ToString("C2");
+            DireccionLlegada = direccionLlegada;
+            ValorEncomienda = valorEncomienda;
             CedulaCliente = cedulaCliente;
             CedulaDestinatario = cedulaDestinatario;
+            CedulaChofer = cedulaChofer;
         }
 
     }

@@ -43,11 +43,11 @@ namespace CapaDiseño
             // 
             // txtApellido
             // 
-            this.txtApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(223)))), ((int)(((byte)(145)))));
+            this.txtApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtApellido.Location = new System.Drawing.Point(313, 142);
+            this.txtApellido.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtApellido.Location = new System.Drawing.Point(345, 145);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(248, 25);
             this.txtApellido.TabIndex = 17;
@@ -55,9 +55,10 @@ namespace CapaDiseño
             // bunifuSeparator3
             // 
             this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator3.LineThickness = 1;
-            this.bunifuSeparator3.Location = new System.Drawing.Point(324, 152);
+            this.bunifuSeparator3.Location = new System.Drawing.Point(345, 151);
             this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
             this.bunifuSeparator3.Size = new System.Drawing.Size(237, 43);
@@ -67,22 +68,22 @@ namespace CapaDiseño
             // 
             // txtCorreo
             // 
-            this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(223)))), ((int)(((byte)(145)))));
+            this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtCorreo.Location = new System.Drawing.Point(324, 202);
+            this.txtCorreo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtCorreo.Location = new System.Drawing.Point(357, 201);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(237, 25);
             this.txtCorreo.TabIndex = 14;
             // 
             // txtNombre
             // 
-            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(223)))), ((int)(((byte)(145)))));
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtNombre.Location = new System.Drawing.Point(307, 84);
+            this.txtNombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtNombre.Location = new System.Drawing.Point(134, 89);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(254, 25);
             this.txtNombre.TabIndex = 13;
@@ -90,9 +91,10 @@ namespace CapaDiseño
             // bunifuSeparator1
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(324, 92);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(134, 100);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(237, 43);
@@ -103,12 +105,13 @@ namespace CapaDiseño
             // bunifuSeparator2
             // 
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(324, 214);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(250, 213);
             this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Size = new System.Drawing.Size(237, 43);
+            this.bunifuSeparator2.Size = new System.Drawing.Size(313, 43);
             this.bunifuSeparator2.TabIndex = 16;
             this.bunifuSeparator2.Transparency = 255;
             this.bunifuSeparator2.Vertical = false;
@@ -116,27 +119,33 @@ namespace CapaDiseño
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(123, 92);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(49, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 17);
+            this.label1.Size = new System.Drawing.Size(79, 23);
             this.label1.TabIndex = 19;
             this.label1.Text = "Usuario";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(123, 148);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(49, 147);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(184, 17);
+            this.label2.Size = new System.Drawing.Size(289, 23);
             this.label2.TabIndex = 20;
             this.label2.Text = "Confirmacion de eliminacion";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(123, 214);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(49, 213);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(194, 17);
+            this.label3.Size = new System.Drawing.Size(302, 23);
             this.label3.TabIndex = 21;
             this.label3.Text = "Contraseña del administrador";
             // 
@@ -153,7 +162,7 @@ namespace CapaDiseño
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(223)))), ((int)(((byte)(145)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(646, 380);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
@@ -168,6 +177,7 @@ namespace CapaDiseño
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EliminarUsuario";
             this.Text = "EliminarUsuario";
+            this.Load += new System.EventHandler(this.EliminarUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

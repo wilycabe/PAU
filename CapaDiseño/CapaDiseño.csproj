@@ -171,6 +171,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Clientes\BuscarDatosCliente.resx">
       <DependentUpon>BuscarDatosCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +244,9 @@
     <EmbeddedResource Include="Viajes\ContabilizarViaje.resx">
       <DependentUpon>ContabilizarViaje.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -263,6 +272,63 @@
       <Project>{3371a155-2a0d-4db2-ab56-28a1de23dffc}</Project>
       <Name>CapaLogica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paquete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trabajo-en-equipo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paquete %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paquete %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trabajo-en-equipo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reporte-de-negocios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paquete %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viajes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reserva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reserva %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enlace1-387x331.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mundo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pasaporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\destino.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\destino %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

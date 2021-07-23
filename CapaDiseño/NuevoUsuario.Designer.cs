@@ -41,7 +41,7 @@ namespace CapaDiseño
             this.bunifuSeparator4 = new Bunifu.Framework.UI.BunifuSeparator();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.bunifuSeparator5 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.txtTipoUsuario = new System.Windows.Forms.TextBox();
+            this.txtCedula = new System.Windows.Forms.TextBox();
             this.bunifuSeparator6 = new Bunifu.Framework.UI.BunifuSeparator();
             this.SuspendLayout();
             // 
@@ -55,12 +55,13 @@ namespace CapaDiseño
             this.btnAcceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcceder.ForeColor = System.Drawing.Color.LightGray;
             this.btnAcceder.Location = new System.Drawing.Point(61, 340);
-            this.btnAcceder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAcceder.Margin = new System.Windows.Forms.Padding(2);
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.Size = new System.Drawing.Size(232, 29);
             this.btnAcceder.TabIndex = 10;
-            this.btnAcceder.Text = "Acceder";
+            this.btnAcceder.Text = "Crear";
             this.btnAcceder.UseVisualStyleBackColor = false;
+            this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
             // 
             // txtCorreo
             // 
@@ -69,11 +70,13 @@ namespace CapaDiseño
             this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtCorreo.Location = new System.Drawing.Point(17, 119);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(261, 20);
             this.txtCorreo.TabIndex = 7;
             this.txtCorreo.Text = "Correo";
+            this.txtCorreo.Enter += new System.EventHandler(this.txtCorreo_Enter);
+            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
             // 
             // txtNombre
             // 
@@ -82,11 +85,13 @@ namespace CapaDiseño
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtNombre.Location = new System.Drawing.Point(17, 21);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(261, 20);
             this.txtNombre.TabIndex = 6;
             this.txtNombre.Text = "Nombre";
+            this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
+            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // bunifuSeparator1
             // 
@@ -94,6 +99,7 @@ namespace CapaDiseño
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator1.LineThickness = 1;
             this.bunifuSeparator1.Location = new System.Drawing.Point(17, 29);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(320, 35);
             this.bunifuSeparator1.TabIndex = 8;
@@ -106,6 +112,7 @@ namespace CapaDiseño
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator2.LineThickness = 1;
             this.bunifuSeparator2.Location = new System.Drawing.Point(17, 128);
+            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Size = new System.Drawing.Size(320, 35);
             this.bunifuSeparator2.TabIndex = 9;
@@ -119,11 +126,13 @@ namespace CapaDiseño
             this.txtApellido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtApellido.Location = new System.Drawing.Point(17, 70);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(261, 20);
             this.txtApellido.TabIndex = 11;
             this.txtApellido.Text = "Apellido";
+            this.txtApellido.Enter += new System.EventHandler(this.txtApellido_Enter);
+            this.txtApellido.Leave += new System.EventHandler(this.txtApellido_Leave);
             // 
             // bunifuSeparator3
             // 
@@ -131,6 +140,7 @@ namespace CapaDiseño
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator3.LineThickness = 1;
             this.bunifuSeparator3.Location = new System.Drawing.Point(17, 78);
+            this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
             this.bunifuSeparator3.Size = new System.Drawing.Size(320, 35);
             this.bunifuSeparator3.TabIndex = 12;
@@ -142,7 +152,7 @@ namespace CapaDiseño
             this.checkBox1.AutoSize = true;
             this.checkBox1.ForeColor = System.Drawing.Color.DimGray;
             this.checkBox1.Location = new System.Drawing.Point(32, 299);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(169, 17);
             this.checkBox1.TabIndex = 13;
@@ -156,11 +166,13 @@ namespace CapaDiseño
             this.txtNombreUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreUsuario.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtNombreUsuario.Location = new System.Drawing.Point(17, 169);
-            this.txtNombreUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(261, 20);
             this.txtNombreUsuario.TabIndex = 14;
             this.txtNombreUsuario.Text = "Nombre de usuario";
+            this.txtNombreUsuario.Enter += new System.EventHandler(this.txtNombreUsuario_Enter);
+            this.txtNombreUsuario.Leave += new System.EventHandler(this.txtNombreUsuario_Leave);
             // 
             // bunifuSeparator4
             // 
@@ -168,6 +180,7 @@ namespace CapaDiseño
             this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator4.LineThickness = 1;
             this.bunifuSeparator4.Location = new System.Drawing.Point(17, 177);
+            this.bunifuSeparator4.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator4.Name = "bunifuSeparator4";
             this.bunifuSeparator4.Size = new System.Drawing.Size(320, 35);
             this.bunifuSeparator4.TabIndex = 15;
@@ -181,11 +194,13 @@ namespace CapaDiseño
             this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtContraseña.Location = new System.Drawing.Point(17, 218);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(261, 20);
             this.txtContraseña.TabIndex = 16;
             this.txtContraseña.Text = "Contraseña";
+            this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
+            this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
             // bunifuSeparator5
             // 
@@ -193,24 +208,27 @@ namespace CapaDiseño
             this.bunifuSeparator5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator5.LineThickness = 1;
             this.bunifuSeparator5.Location = new System.Drawing.Point(17, 226);
+            this.bunifuSeparator5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator5.Name = "bunifuSeparator5";
             this.bunifuSeparator5.Size = new System.Drawing.Size(320, 35);
             this.bunifuSeparator5.TabIndex = 17;
             this.bunifuSeparator5.Transparency = 255;
             this.bunifuSeparator5.Vertical = false;
             // 
-            // txtTipoUsuario
+            // txtCedula
             // 
-            this.txtTipoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.txtTipoUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTipoUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoUsuario.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtTipoUsuario.Location = new System.Drawing.Point(17, 254);
-            this.txtTipoUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtTipoUsuario.Name = "txtTipoUsuario";
-            this.txtTipoUsuario.Size = new System.Drawing.Size(261, 20);
-            this.txtTipoUsuario.TabIndex = 18;
-            this.txtTipoUsuario.Text = "Tipo de usuario";
+            this.txtCedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCedula.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCedula.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtCedula.Location = new System.Drawing.Point(17, 254);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(261, 20);
+            this.txtCedula.TabIndex = 18;
+            this.txtCedula.Text = "Cedula";
+            this.txtCedula.Enter += new System.EventHandler(this.txtCedula_Enter);
+            this.txtCedula.Leave += new System.EventHandler(this.txtCedula_Leave);
             // 
             // bunifuSeparator6
             // 
@@ -218,6 +236,7 @@ namespace CapaDiseño
             this.bunifuSeparator6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator6.LineThickness = 1;
             this.bunifuSeparator6.Location = new System.Drawing.Point(17, 262);
+            this.bunifuSeparator6.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator6.Name = "bunifuSeparator6";
             this.bunifuSeparator6.Size = new System.Drawing.Size(320, 35);
             this.bunifuSeparator6.TabIndex = 19;
@@ -230,7 +249,7 @@ namespace CapaDiseño
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(355, 456);
-            this.Controls.Add(this.txtTipoUsuario);
+            this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.bunifuSeparator6);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.bunifuSeparator5);
@@ -245,9 +264,10 @@ namespace CapaDiseño
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.bunifuSeparator2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NuevoUsuario";
             this.Text = "NuevoUsuario";
+            this.Load += new System.EventHandler(this.NuevoUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,7 +286,7 @@ namespace CapaDiseño
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator4;
         private System.Windows.Forms.TextBox txtContraseña;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator5;
-        private System.Windows.Forms.TextBox txtTipoUsuario;
+        private System.Windows.Forms.TextBox txtCedula;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator6;
     }
 }

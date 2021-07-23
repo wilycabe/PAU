@@ -33,5 +33,15 @@ namespace CapaBase.Properties {
                 return ((string)(this["PAUConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=DESKTOP-9GQ0VCA ; database=PAU ; integrated security = true")]
+        public string Remoto {
+            get {
+                return ((string)(this["Remoto"]));
+            }
+        }
     }
 }

@@ -43,7 +43,7 @@ namespace CapaDiseño
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(135, 83);
+            this.iconButton1.Location = new System.Drawing.Point(176, 158);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(132, 59);
             this.iconButton1.TabIndex = 0;
@@ -56,11 +56,11 @@ namespace CapaDiseño
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(344, 83);
+            this.iconButton2.Location = new System.Drawing.Point(385, 158);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(132, 59);
             this.iconButton2.TabIndex = 1;
-            this.iconButton2.Text = "Reporte 1";
+            this.iconButton2.Text = "Reporte 2";
             this.iconButton2.UseVisualStyleBackColor = true;
             // 
             // iconButton3
@@ -69,11 +69,11 @@ namespace CapaDiseño
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(561, 83);
+            this.iconButton3.Location = new System.Drawing.Point(602, 158);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(132, 59);
             this.iconButton3.TabIndex = 2;
-            this.iconButton3.Text = "Reporte 1";
+            this.iconButton3.Text = "Reporte 3";
             this.iconButton3.UseVisualStyleBackColor = true;
             // 
             // iconButton4
@@ -82,7 +82,7 @@ namespace CapaDiseño
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton4.IconColor = System.Drawing.Color.Black;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.Location = new System.Drawing.Point(135, 245);
+            this.iconButton4.Location = new System.Drawing.Point(176, 320);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(132, 59);
             this.iconButton4.TabIndex = 3;
@@ -95,7 +95,7 @@ namespace CapaDiseño
             this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton5.IconColor = System.Drawing.Color.Black;
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.Location = new System.Drawing.Point(344, 245);
+            this.iconButton5.Location = new System.Drawing.Point(385, 320);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(132, 59);
             this.iconButton5.TabIndex = 4;
@@ -108,7 +108,7 @@ namespace CapaDiseño
             this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton6.IconColor = System.Drawing.Color.Black;
             this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.Location = new System.Drawing.Point(561, 245);
+            this.iconButton6.Location = new System.Drawing.Point(602, 320);
             this.iconButton6.Name = "iconButton6";
             this.iconButton6.Size = new System.Drawing.Size(132, 59);
             this.iconButton6.TabIndex = 5;
@@ -119,7 +119,8 @@ namespace CapaDiseño
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.ClientSize = new System.Drawing.Size(906, 532);
             this.Controls.Add(this.iconButton6);
             this.Controls.Add(this.iconButton5);
             this.Controls.Add(this.iconButton4);

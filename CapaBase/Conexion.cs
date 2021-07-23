@@ -7,7 +7,11 @@ namespace CapaBase
 {
     public class Conexion
     {
-        public string Cadena = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\PAU.mdf;Integrated Security=True;Connect Timeout=30";
+
+        //public string Cadena = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\PAU.mdf;Integrated Security=True;Connect Timeout=30";
+
+        public string Cadena = Properties.Settings.Default.Remoto;
+
         public SqlConnection Conectar =  new();
 
         public Conexion() 

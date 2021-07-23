@@ -1,209 +1,710 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using System.Windows.Forms;
-
+using System.Globalization;
 
 namespace CapaBase
 {
     public class Operaciones
     {
-        private static readonly Conexion objConec = new Conexion();
-        private DataTable tabla = new DataTable();
 
-        public DataTable MostrarEnc()
+        private static readonly Conexion Conexion = new();
+        private static DataTable _tabla;
+
+        #region Usuario
+
+
+        public static bool ValidarUsuarioContrasena(string idUsuario, string contrasena)
         {
             try
             {
-                objConec.Abrir();
-                SqlCommand comando = new SqlCommand("Select * From encomienda", objConec.Conectar);
-                SqlDataAdapter adaptador = new SqlDataAdapter();
-                adaptador.SelectCommand = comando;
-                adaptador.Fill(tabla);
-                return tabla;
+                _tabla = new DataTable();
+                var cmdText = $"SELECT * FROM usuario WHERE id_usuario='{idUsuario}' AND contrasena_usuario ='{contrasena}'";
+                Conexion.Abrir();
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                SqlDataAdapter adapter = new() { SelectCommand = command };
+                adapter.Fill(_tabla);
+                _tabla.AcceptChanges();
+                Conexion.Cerrar();
+                return _tabla.Rows.Count > 0;
             }
-            catch
+            catch (Exception)
             {
-                objConec.Cerrar();
-                tabla = null;
-                return tabla;
-            }
-        }
-        public void InsertarEnc(int _cod_enc, string _ciudad_destino_enc, string _direccion_destino_enc, string _ciudad_fin_enc, DateTime _fecha_enc, float _valor_enc, int _codigo_postal_enc, float _peso_enc, string _descrip_enc, int _dni_destinatario_enc, int _dni_cliente_enc)
-        {
-            objConec.Abrir();
-            String cadenaSQL = "INSERT into encomienda(codigo_enc,ciudad_env_enc,direccion_env_enc,ciudad_lleg_enc,fecha_enc,valor_enc,codigo_postal_enc,peso,descripción,cecula_destinatario,cedula_cliente) VALUES(" + _cod_enc + ",'" + _ciudad_destino_enc + "','" + _direccion_destino_enc + "','" + _ciudad_fin_enc + "','" + _fecha_enc + "','" + _valor_enc + "','" + _codigo_postal_enc + "','" + _peso_enc + "','" + _descrip_enc + "','" + _dni_destinatario_enc + "','" + _dni_cliente_enc + "')";
-            SqlCommand comando = new SqlCommand(cadenaSQL, objConec.Conectar);
-            comando.ExecuteNonQuery();
-            objConec.Cerrar();
-
-        }
-        public void EliminarEnc(int _cod_enc)
-        {
-            objConec.Abrir();
-            string cadenaSQL = "DELETE from encomienda where codigo_enc=" + _cod_enc + "";
-            SqlCommand comando = new SqlCommand(cadenaSQL, objConec.Conectar);
-            comando.ExecuteNonQuery();
-            objConec.Cerrar();
-        }
-        public void EditarEnc(int _cod_enc, string _ciudad_destino_enc, string _direccion_destino_enc, string _ciudad_fin_enc, DateTime _fecha_enc, float _valor_enc, int _codigo_postal_enc, float _peso_enc, string _descrip_enc, int _dni_destinatario_enc, int _dni_cliente_enc)
-        {
-            objConec.Abrir();
-            string cadenaSQL = "UPDATE encomienda set codigo_enc'" + _cod_enc + "'ciudad_env_enc='" + _ciudad_destino_enc + "'direccion_env_enc='" + _direccion_destino_enc + "'ciudad_lleg_enc='" + _ciudad_fin_enc + "'fecha_enc'" + _fecha_enc + "'valor_enc='" + _valor_enc + "'codigo_postal_enc='" + _codigo_postal_enc + "'peso='" + _peso_enc + "'descripcion='" + _descrip_enc + "'cedula_destinatario='" + _dni_destinatario_enc + "'cedula_cliente='" + _dni_cliente_enc + "";
-            SqlCommand comando = new SqlCommand(cadenaSQL, objConec.Conectar);
-            comando.ExecuteNonQuery();
-            objConec.Cerrar();
-        }
-        public void BuscarEnc(int _cod_enc)
-        {
-            objConec.Abrir();
-            string cadenaSQL = "SELECT * from encomienda where codigo_enc =" + _cod_enc + "";
-            SqlCommand comando = new SqlCommand(cadenaSQL, objConec.Conectar);
-            comando.ExecuteNonQuery();
-            objConec.Cerrar();
-        }
-        public DataTable MostrarReser()
-        {
-            try
-            {
-                objConec.Abrir();
-                SqlCommand comando = new SqlCommand("Select * From reservacion", objConec.Conectar);
-                SqlDataAdapter adaptador = new SqlDataAdapter();
-                adaptador.SelectCommand = comando;
-                adaptador.Fill(tabla);
-                return tabla;
-            }
-            catch
-            {
-                objConec.Cerrar();
-                tabla = null;
-                return tabla;
-            }
-        }
-        public void InsertarReser(int _cod_reser, string _ciudad_destino, string _direccion_destino, string _ciudad_fin, DateTime _fecha_reser, float _valor_reser, int _dni_chofer, int _dni_cliente)
-        {
-            objConec.Abrir();
-            String cadenaSQL = "INSERT into reservación(codigo_reser,ciudad_par_reser,direccion_par_reser,ciudad_lleg_reser,direccion_lleg_reser,fecha_reser,vlaor_res,cedula_chofer,cedula_cliente) VALUES(" + _cod_reser + ",'" + _ciudad_destino + "','" + _direccion_destino + "','" + _ciudad_fin + "','" + _fecha_reser + "','" + _dni_chofer + "','" + _dni_cliente + "')";
-            SqlCommand comando = new SqlCommand(cadenaSQL, objConec.Conectar);
-            comando.ExecuteNonQuery();
-            objConec.Cerrar();
-
-        }
-        public void EliminarReser(int _cod_reser)
-        {
-            objConec.Abrir();
-            string cadenaSQL = "DELETE from Estudiantes where dniEstudiante=" + _cod_reser + "";
-            SqlCommand comando = new SqlCommand(cadenaSQL, objConec.Conectar);
-            comando.ExecuteNonQuery();
-            objConec.Cerrar();
-        }
-        public void EditarReser(int _cod_reser, string _ciudad_destino, string _direccion_destino, string _ciudad_fin, string _direccion_fin, DateTime _fecha_reser, float _valor_reser, int _dni_chofer, int _dni_cliente)
-        {
-            objConec.Abrir();
-            string cadenaSQL = "UPDATE reservacion set codigo_reser'" + _cod_reser + "'ciudad_par_reser='" + _ciudad_destino + "'direccion_par_reser='" + _direccion_destino + "'ciudad_lleg_reser='" + _ciudad_fin + "'direccion_lleg_reser='" + _direccion_fin + "'fecha_reser='" + _fecha_reser + "'valor_res='" + _valor_reser + "'cedula_chofer='" + _dni_chofer + "'cedula_cliente='" + _dni_cliente + "";
-            SqlCommand comando = new SqlCommand(cadenaSQL, objConec.Conectar);
-            comando.ExecuteNonQuery();
-            objConec.Cerrar();
-        }
-
-        public void BuscarReser(int _cod_reser)
-        {
-            objConec.Abrir();
-            string cadenaSQL = "SELECT * from reservacion where codigo_reser =" + _cod_reser + "";
-            SqlCommand comando = new SqlCommand(cadenaSQL, objConec.Conectar);
-            comando.ExecuteNonQuery();
-            objConec.Cerrar();
-        }
-
-        #region esto necesitamos la capa logica
-        
-        // regresa la una tabla con los datos del usuario con un nick en espeficifico
-        public static DataTable ExisteUsuario(string nick)
-        {
-            try
-            {
-                var sentencia = "SELECT * FROM usuario WHERE id_usuario = '" + nick + "'";
-                var tabla = new DataTable();
-                var conexion = new SqlCommand(sentencia, objConec.Conectar);
-                var adaptador = new SqlDataAdapter(conexion);
-                adaptador.Fill(tabla);
-                tabla.AcceptChanges();
-                return tabla;
-            }
-            catch
-            {
-                // si ocurre un error se lanza esta excepcion, se debe campturar desde donde se llama la funcion "ExisteUsuario"
-                throw new AccessViolationException();
-            }
-        }
-
-        public static bool ValidadUsuarioContrasena(string usuario, string contrasena)
-        {
-            try
-            {
-                var sentencia = "" +
-                                "SELECT * FROM usuario " +
-                                "WHERE id_usuario = '" + usuario + "' " +
-                                "AND contrasena_usuario = '" + contrasena + "'";
-                var tabla = new DataTable();
-                var conexion = new SqlCommand(sentencia, objConec.Conectar);
-                var adaptador = new SqlDataAdapter(conexion);
-                adaptador.Fill(tabla);
-                tabla.AcceptChanges();
-                return tabla.Rows.Count > 0;
-            }
-            catch
-            {
+                Conexion.Cerrar();
+                _tabla = null;
                 return false;
             }
         }
 
-        public static void AnadirUsuarioBaseDatos(string cedula, string nombre, string apellido, string celular, string correo, string direccion, string nick, string contrasena )
+        public static DataTable BuscarUsuario(string idUsuario)
         {
             try
             {
-                var sentencia = "" +
-                                "INSERT INTO usuarios " +
-                                "VALUES('" + cedula + "', " +
-                                "'" + nombre + "', " +
-                                "'" + apellido + "', " +
-                                "'" + celular + "', " +
-                                "'" + correo + "', " +
-                                "'" + direccion + "', " +
-                                "'" + nick + "', " +
-                                "'" + contrasena + "')";
-                var conexion = new SqlCommand(sentencia, objConec.Conectar);
-                conexion.ExecuteNonQuery();
+                _tabla = new DataTable();
+                var cmdText = $"SELECT * FROM usuario WHERE id_usuario='{idUsuario}'";
+                Conexion.Abrir();
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                SqlDataAdapter adapter = new() { SelectCommand = command };
+                adapter.Fill(_tabla);
+                _tabla.AcceptChanges();
+                Conexion.Cerrar();
+                return _tabla;
             }
-            catch
+            catch (Exception)
             {
-                //
+                Conexion.Cerrar();
+                _tabla = null;
+                return _tabla;
             }
         }
+
+        public static void AnadirUsuario(string cedula, string nombre, string apellido, string celular, string correo,
+            string direccion, string idUsuario, string contrasena)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText =
+                    $"INSERT INTO usuario(cedula_usuario, nombres_usuario, apellidos_usuario, celular_usuario, correo_usuario, direccion_usuario, id_usuario, contrasena_usuario) VALUES ('{cedula}', '{nombre}', '{apellido}', '{celular}', '{correo}', '{direccion}', '{idUsuario}', '{contrasena}')";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+
+        }
+
+        public static void ModificarUsuario(string cedula, string nombre, string apellido, string celular, string correo,
+            string direccion, string idUsuario, string contrasena)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText =
+                    $"UPDATE usuario SET cedula_usuario='{cedula}', " +
+                    $"nombres_usuario='{nombre}', " +
+                    $"apellidos_usuario='{apellido}', " +
+                    $"celular_usuario='{celular}', " +
+                    $"correo_usuario='{correo}', " +
+                    $"direccion_usuario='{direccion}', " +
+                    $"contrasena_usuario='{contrasena}' " +
+                    $"WHERE id_usuario = '{idUsuario}'";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
+        public static void EliminarUsuario(string idUsuario, string contrasena)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText =
+                    $"DELETE FROM usuario WHERE " +
+                    $"contrasena_usuario='{contrasena}' " +
+                    $"AND id_usuario = '{idUsuario}'";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
+        #endregion
+
+        #region Chofer
+
+        public static DataTable BuscarChofer(string cedula)
+        {
+            try
+            {
+                _tabla = new DataTable();
+                var cmdText = $"SELECT * FROM chofer WHERE cedula_chofer='{cedula}'";
+                Conexion.Abrir();
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                SqlDataAdapter adapter = new() { SelectCommand = command };
+                adapter.Fill(_tabla);
+                _tabla.AcceptChanges();
+                Conexion.Cerrar();
+                return _tabla;
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+                _tabla = null;
+                return _tabla;
+            }
+        }
+
+        public static void AnadirChofer(string cedula, string nombre, string apellido, string celular, string correo, string direccion, string fechaNacChofer)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText =
+                    $"INSERT INTO chofer VALUES (" +
+                    $"'{cedula}', " +
+                    $"'{nombre}', " +
+                    $"'{apellido}', " +
+                    $"'{celular}', " +
+                    $"'{correo}', " +
+                    $"'{direccion}', " +
+                    $"'{DateTime.Parse(fechaNacChofer, CultureInfo.CurrentCulture)}')";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+
+        }
+
+        public static void ModificarChofer(string cedula, string nombre, string apellido, string celular, string correo, string direccion, string fechaNacChofer)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText =
+                    $"UPDATE chofer SET nombres_chofer='{nombre}', " +
+                    $"apellidos_chofer='{apellido}', " +
+                    $"celular_chofer='{celular}', " +
+                    $"correo_chofer='{correo}', " +
+                    $"direccion_chofer='{direccion}', " +
+                    $"fecha_nac_chofer='{fechaNacChofer}' " +
+                    $"WHERE cedula_chofer = '{cedula}'";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
+        public static void EliminarChofer(string cedula)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText = $"DELETE FROM chofer WHERE cedula_chofer='{cedula}'";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
+        #endregion
 
         #region Cliente
 
-        public static void AnadirClienteBaseDatos(string cedula, string nombre, string apellido, string celular, string correo, string direccion)
+        public static DataTable BuscarCliente(string cedula)
         {
-            var sentencia = "" +
-                            "INSERT INTO usuarios " +
-                            "VALUES('" + cedula + "', " +
-                            "'" + nombre + "', " +
-                            "'" + apellido + "', " +
-                            "'" + celular + "', " +
-                            "'" + correo + "', " +
-                            "'" + direccion + "')";
-            var conexion = new SqlCommand(sentencia, objConec.Conectar);
-            conexion.ExecuteNonQuery();
+            try
+            {
+                _tabla = new DataTable();
+                var cmdText = $"SELECT * FROM cliente WHERE cedula_cliente='{cedula}'";
+                Conexion.Abrir();
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                SqlDataAdapter adapter = new() { SelectCommand = command };
+                adapter.Fill(_tabla);
+                _tabla.AcceptChanges();
+                Conexion.Cerrar();
+                return _tabla;
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+                _tabla = null;
+                return _tabla;
+            }
+        }
+
+        public static void AnadirCliente(string cedula, string nombre, string apellido, string celular, string correo, string direccion, string fechaNacCiente)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText =
+                    $"INSERT INTO cliente VALUES (" +
+                    $"'{cedula}', " +
+                    $"'{nombre}', " +
+                    $"'{apellido}', " +
+                    $"'{celular}', " +
+                    $"'{correo}', " +
+                    $"'{direccion}', " +
+                    $"'{DateTime.Parse(fechaNacCiente, CultureInfo.CurrentCulture)}')";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
+        public static void ModificarCliente(string cedula, string nombre, string apellido, string celular, string correo, string direccion, string fechaNacCliente)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText =
+                    $"UPDATE cliente SET nombres_cliente='{nombre}', " +
+                    $"apellidos_cliente='{apellido}', " +
+                    $"celular_cliente='{celular}', " +
+                    $"correo_cliente='{correo}', " +
+                    $"direccion_cliente='{direccion}', " +
+                    $"fecha_nac_cliente='{fechaNacCliente}' " +
+                    $"WHERE cedula_cliente = '{cedula}'";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
+        public static void EliminarCliente(string cedula)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText = $"DELETE FROM cliente WHERE cedula_cliente='{cedula}'";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
         }
 
         #endregion
 
+        #region Destinatario
+
+        public static DataTable BuscarDestinatario(string cedula)
+        {
+            try
+            {
+                _tabla = new DataTable();
+                var cmdText = $"SELECT * FROM destinatario WHERE cedula_destinatario='{cedula}'";
+                Conexion.Abrir();
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                SqlDataAdapter adapter = new() { SelectCommand = command };
+                adapter.Fill(_tabla);
+                _tabla.AcceptChanges();
+                Conexion.Cerrar();
+                return _tabla;
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+                _tabla = null;
+                return _tabla;
+            }
+        }
+
+        public static void AnadirDestinatario(string cedula, string nombre, string apellido, string celular, string correo, string direccion)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText =
+                    $"INSERT INTO destinatario VALUES (" +
+                    $"'{cedula}', " +
+                    $"'{nombre}', " +
+                    $"'{apellido}', " +
+                    $"'{celular}', " +
+                    $"'{correo}', " +
+                    $"'{direccion}') ";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
+        public static void ModificarDestinatario(string cedula, string nombre, string apellido, string celular, string correo, string direccion)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText =
+                    $"UPDATE destinatario SET nombres_destinatario='{nombre}', " +
+                    $"apellidos_destinatario='{apellido}', " +
+                    $"celular_destinatario='{celular}', " +
+                    $"correo_destinatario='{correo}', " +
+                    $"direccion_destinatario='{direccion}' " +
+                    $"WHERE cedula_destinatario = '{cedula}'";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
+        public static void EliminarDestinatario(string cedula)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText = $"DELETE FROM destinatario WHERE cedula_destinatario='{cedula}'";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
         #endregion
 
+        #region Vehiculo
+
+        public static DataTable BuscarVehiculo(string placa)
+        {
+            try
+            {
+                _tabla = new DataTable();
+                var cmdText = $"SELECT * FROM vehiculo WHERE placa='{placa}'";
+                Conexion.Abrir();
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                SqlDataAdapter adapter = new() { SelectCommand = command };
+                adapter.Fill(_tabla);
+                _tabla.AcceptChanges();
+                Conexion.Cerrar();
+                return _tabla;
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+                _tabla = null;
+                return _tabla;
+            }
+        }
+
+        public static void AnadirVehiculo(string placa, string modelo, string marca, string color, string cedulaChofer, int agno)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText =
+                    $"INSERT INTO vehiculo VALUES (" +
+                    $"'{placa}', " +
+                    $"'{modelo}', " +
+                    $"'{marca}', " +
+                    $"'{color}', " +
+                    $"'{cedulaChofer}', " +
+                    $"'{agno}') ";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
+        public static void ModificarVehiculo(string placa, string modelo, string marca, string color, string cedulaChofer, int agno)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText =
+                    $"UPDATE vehiculo SET modelo='{modelo}', " +
+                    $"marca='{marca}', " +
+                    $"color='{color}', " +
+                    $"cedula_chofer='{cedulaChofer}' " +
+                    $"agno='{agno}' " +
+                    $"WHERE placa = '{placa}'";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
+        public static void EliminarVehiculo(string placa)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText = $"DELETE FROM vehiculo WHERE placa='{placa}'";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
+        #endregion
+
+        #region Encomienda
+
+        public static DataTable BuscarEncomienda(string codigo)
+        {
+            try
+            {
+                _tabla = new DataTable();
+                var cmdText = $"SELECT * FROM encomienda WHERE codigo_enc='{codigo}'";
+                Conexion.Abrir();
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                SqlDataAdapter adapter = new() { SelectCommand = command };
+                adapter.Fill(_tabla);
+                _tabla.AcceptChanges();
+                Conexion.Cerrar();
+                return _tabla;
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+                _tabla = null;
+                return _tabla;
+            }
+        }
+
+        public static void AnadirEncomienda(string ciudadEnvEnc, string direccionEnvEnc, string ciudadLlegEnc, string direccionLlegEnc, string fechaEnc, double valorEnc, string codigoPostalEnc, double peso, string descripcion, string cedulaDestinatario, string cedulaCliente, string cedulaChofer)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText =
+                    $"INSERT INTO encomienda(ciudad_env_enc,direccion_env_enc,ciudad_lleg_enc,direccion_lleg_enc,fecha_enc,valor_enc,codigo_postal_enc,peso,descripcion,cedula_destinatario,cedula_cliente,cedula_chofer) " +
+                    $"VALUES (" +
+                    $"'{ciudadEnvEnc}', " +
+                    $"'{direccionEnvEnc}', " +
+                    $"'{ciudadLlegEnc}', " +
+                    $"'{direccionLlegEnc}', " +
+                    $"'{fechaEnc}', " +
+                    $"'{valorEnc}', " +
+                    $"'{codigoPostalEnc}', " +
+                    $"'{peso}', " +
+                    $"'{descripcion}', " +
+                    $"'{cedulaDestinatario}', " +
+                    $"'{cedulaCliente}', " +
+                    $"'{cedulaChofer}')";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
+        public static void ModificarEncomienda(string codigoEnc, string ciudadEnvEnc, string direccionEnvEnc, string ciudadLlegEnc, string direccionLlegEnc, string fechaEnc, double valorEnc, string codigoPostalEnc, double peso, string descripcion, string cedulaDestinatario, string cedulaCliente, string cedulaChofer)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText =
+                    $"UPDATE encomienda SET ciudad_env_enc='{ciudadEnvEnc}', " +
+                    $"direccion_env_enc='{direccionEnvEnc}', " +
+                    $"ciudad_lleg_enc='{ciudadLlegEnc}', " +
+                    $"direccionLlegEnc='{direccionLlegEnc}', " +
+                    $"fecha_enc='{fechaEnc}' " +
+                    $"valor_enc='{valorEnc}' " +
+                    $"codigo_postal_enc='{codigoPostalEnc}' " +
+                    $"peso='{peso}' " +
+                    $"descripcion='{descripcion}' " +
+                    $"cedula_destinatario='{cedulaDestinatario}' " +
+                    $"cedula_cliente='{cedulaCliente}' " +
+                    $"cedula_chofer='{cedulaChofer}' " +
+                    $"WHERE codigo_enc = '{codigoEnc}'";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
+        public static void EliminarEncomienda(string codigo)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText = $"DELETE FROM encomienda WHERE codigo_enc='{codigo}'";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
+        #endregion
+
+        #region Reservacion
+
+        public static DataTable BuscarReservacion(string codigo)
+        {
+            try
+            {
+                _tabla = new DataTable();
+                var cmdText = $"SELECT * FROM reservacion WHERE codigo_reser='{codigo}'";
+                Conexion.Abrir();
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                SqlDataAdapter adapter = new() { SelectCommand = command };
+                adapter.Fill(_tabla);
+                _tabla.AcceptChanges();
+                Conexion.Cerrar();
+                return _tabla;
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+                _tabla = null;
+                return _tabla;
+            }
+        }
+
+        public static void AnadirReservacion(string ciudadParReser, string dirrecionParReser, string ciudadLlegReser, string direccionLlegReser, string fechaReser, double valorReser, string cedulaChofer, string cedulaCliente)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText =
+                    $"INSERT INTO reservacion(ciudad_par_reser,direccion_par_reser,ciudad_lleg_reser,direccion_lleg_reser,fecha_reser,valor_res,cedula_chofer,cedula_cliente) " +
+                    $"VALUES ('{ciudadParReser}', " +
+                    $"'{dirrecionParReser}', " +
+                    $"'{ciudadLlegReser}', " +
+                    $"'{direccionLlegReser}', " +
+                    $"'{fechaReser}', " +
+                    $"'{valorReser}', " +
+                    $"'{cedulaChofer}', " +
+                    $"'{cedulaCliente}') ";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
+        public static void ModificarReservacion(string codigo, string ciudadParReser, string dirrecionParReser, string ciudadLlegReser, string direccionLlegReser, string fechaReser, double valorReser, string cedulaChofer, string cedulaCliente)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText =
+                    $"UPDATE reservacion SET ciudad_par_reser='{ciudadParReser}', " +
+                    $"direccion_par_reser='{dirrecionParReser}', " +
+                    $"ciudad_lleg_reser='{ciudadLlegReser}', " +
+                    $"direccion_lleg_reser='{direccionLlegReser}' " +
+                    $"fecha_reser='{fechaReser}' " +
+                    $"valor_res='{valorReser}' " +
+                    $"cedula_chofer='{cedulaChofer}' " +
+                    $"cedula_cliente='{cedulaCliente}' " +
+                    $"WHERE codigo_reser = '{codigo}'";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
+        public static void EliminarReservacion(string codigo)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText = $"DELETE FROM reservacion WHERE codigo_reser='{codigo}'";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
+        #endregion
+
+        public static void EliminarVehiculoPorChofer(string cedula)
+        {
+            try
+            {
+                Conexion.Abrir();
+                var cmdText = $"DELETE FROM vehiculo WHERE cedula_chofer='{cedula}'";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                command.ExecuteNonQuery();
+                Conexion.Cerrar();
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+            }
+        }
+
+        public static DataTable BuscarVehiculoPorChofer(string cedula)
+        {
+            try
+            {
+                Conexion.Abrir();
+                _tabla = new DataTable();
+                var cmdText = $"SELECT * FROM vehiculo WHERE cedula_chofer='{cedula}'";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                SqlDataAdapter adapter = new() { SelectCommand = command };
+                adapter.Fill(_tabla);
+                _tabla.AcceptChanges();
+                Conexion.Cerrar();
+                return _tabla;
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+                _tabla = null;
+                return _tabla;
+            }
+        }
     }
 }

@@ -16,10 +16,5 @@ namespace CapaDiseño
         {
             InitializeComponent();
         }
-
-        private void bntIngresar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

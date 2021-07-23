@@ -15,31 +15,50 @@ namespace CapaDiseño
         public PantallaPrincipal()
         {
             InitializeComponent();
-            Visibilidad();
+            visibilidad();
+            
         }
-        private void Visibilidad()
+
+        private void visibilidad()
         {
-            panelPersonal.Visible = false;
-            panelCliente.Visible = false;
-            panelEncomienda.Visible = false;
-            panelViaje.Visible = false;
+            panelSubMenuPersonal.Visible = false;
+            panelSubMenuCliente.Visible = false;
+            panelSubMenuEnco.Visible = false;
+            panelSubMenuViajes.Visible = false;
         }
-        private void OcultarSubmenu()
+
+        private void ocultarSubMenu()
         {
-            if (panelPersonal.Visible == true)
-                panelPersonal.Visible = false;
-            if (panelCliente.Visible == true)
-                panelCliente.Visible = false;
-            if (panelEncomienda.Visible == true)
-                panelEncomienda.Visible = false;
-            if (panelViaje.Visible == true)
-                panelViaje.Visible = false;
+            if (panelSubMenuPersonal.Visible == true)
+                panelSubMenuPersonal.Visible = false;
+            if (panelSubMenuCliente.Visible == true)
+                panelSubMenuCliente.Visible = true;
+            if (panelSubMenuEnco.Visible == true)
+                panelSubMenuEnco.Visible = false;
+            if (panelSubMenuViajes.Visible == true)
+                panelSubMenuViajes.Visible = false;
+
         }
+
+        private void MostrarSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                ocultarSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+            {
+                subMenu.Visible = false;
+            }
+        }
+        
+     
         private void MostrarSubmenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
             {
-                OcultarSubmenu();
+                ocultarSubMenu();
                 subMenu.Visible = true;
             }
             else
@@ -52,196 +71,231 @@ namespace CapaDiseño
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void openChildForm(Form childForm) // Metodo para abrir panel hijo en panel padre
         {
 
-            foreach (Form ActiveForm in panelPadre.Controls) ActiveForm.Close();
+            foreach (Form ActiveForm in panelPrincipal.Controls) ActiveForm.Close();
             childForm.TopLevel = false;
-            childForm.Dock = DockStyle.Fill;
-
-            this.panelPadre.Controls.Add(childForm);
-            this.panelPadre.Tag = childForm;
+            //childForm.Dock = DockStyle.Fill;
+            this.panelPrincipal.Controls.Add(childForm);
+            this.panelPrincipal.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
 
         }
+        
 
-      
-
-
-        private void iconButton4_Click_1(object sender, EventArgs e)
+        private void btnEncomiendas_Click(object sender, EventArgs e)
         {
-            MostrarSubmenu(panelPersonal);
-
-            if (panelPadre.Controls.Count > 0)
+            MostrarSubMenu(panelSubMenuEnco);
+            if (panelPrincipal.Controls.Count > 0)
             {
-                panelPadre.Controls.RemoveAt(0);
+                panelPrincipal.Controls.RemoveAt(0);
             }
 
         }
 
-        private void iconButton13_Click_1(object sender, EventArgs e)
+        private void btnPersonal_Click(object sender, EventArgs e)
         {
-            MostrarSubmenu(panelCliente);
-
-            if (panelPadre.Controls.Count > 0)
+            MostrarSubMenu(panelSubMenuPersonal);
+            //MostrarSubmenu(panelSubMenuPersonal);
+            if (panelPrincipal.Controls.Count > 0)
             {
-                panelPadre.Controls.RemoveAt(0);
+                panelPrincipal.Controls.RemoveAt(0);
             }
 
         }
 
-        private void iconButton18_Click(object sender, EventArgs e)
+        private void btnIngresarPersonal_Click(object sender, EventArgs e)
         {
-            MostrarSubmenu(panelEncomienda);
-
-            if (panelPadre.Controls.Count > 0)
+            ocultarSubMenu();
+            if (panelPrincipal.Controls.Count > 0)
             {
-                panelPadre.Controls.RemoveAt(0);
-            }
-
-        }
-
-        private void iconButton19_Click(object sender, EventArgs e)
-        {
-            MostrarSubmenu(panelViaje);
-
-            if (panelPadre.Controls.Count > 0)
-            {
-                panelPadre.Controls.RemoveAt(0);
-            }
-
-        }
-
-        private void iconButton7_Click(object sender, EventArgs e)
-        {
-            OcultarSubmenu();
-            //
-            //
-            //
-            if (panelPadre.Controls.Count > 0)
-            {
-                panelPadre.Controls.RemoveAt(0);
+                panelPrincipal.Controls.RemoveAt(0);
             }
             openChildForm(new IngresarDatosPersonal());
+
         }
 
-        private void iconButton8_Click(object sender, EventArgs e)
+        private void btnBuscarPersonal_Click(object sender, EventArgs e)
         {
-            OcultarSubmenu();
+            ocultarSubMenu();
+            if (panelPrincipal.Controls.Count > 0)
+            {
+                panelPrincipal.Controls.RemoveAt(0);
+            }
             openChildForm(new BuscarDatosPersonal());
-
         }
 
-        private void iconButton9_Click(object sender, EventArgs e)
+        private void btnModificarPersonal_Click(object sender, EventArgs e)
         {
-            OcultarSubmenu();
+            ocultarSubMenu();
+            if (panelPrincipal.Controls.Count > 0)
+            {
+                panelPrincipal.Controls.RemoveAt(0);
+            }
             openChildForm(new ModificarDatosPersonal());
+        }
 
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            MostrarSubMenu(panelSubMenuCliente);
+            if (panelPrincipal.Controls.Count > 0)
+            {
+                panelPrincipal.Controls.RemoveAt(0);
+            }
 
         }
 
-        private void iconButton10_Click(object sender, EventArgs e)
+        private void btnIngresarClientes_Click(object sender, EventArgs e)
         {
-            //OcultarSubmenu();
-            //openChildForm(new EliminarDatosPersonal());
-
-        }
-
-        private void iconButton12_Click(object sender, EventArgs e)
-        {
-            OcultarSubmenu();
+            ocultarSubMenu();
+            if (panelPrincipal.Controls.Count > 0)
+            {
+                panelPrincipal.Controls.RemoveAt(0);
+            }
             openChildForm(new IngresarDatosCliente());
-
         }
 
-        private void iconButton11_Click(object sender, EventArgs e)
-        {
-            OcultarSubmenu();
-            openChildForm(new BuscarDatosCliente());
-        }
+        
 
-        private void iconButton6_Click(object sender, EventArgs e)
+        private void btnModificarClientes_Click(object sender, EventArgs e)
         {
-            OcultarSubmenu();
+            ocultarSubMenu();
+            if (panelPrincipal.Controls.Count > 0)
+            {
+                panelPrincipal.Controls.RemoveAt(0);
+            }
             openChildForm(new ModificarDatosCliente());
         }
 
-        private void iconButton5_Click(object sender, EventArgs e)
+        private void btnIngresarEnco_Click(object sender, EventArgs e)
         {
-            //OcultarSubmenu();
-            //openChildForm(new EliminarDatosCliente());
-        }
-
-        private void iconButton17_Click(object sender, EventArgs e)
-        {
-            OcultarSubmenu();
+            ocultarSubMenu();
+            if (panelPrincipal.Controls.Count > 0)
+            {
+                panelPrincipal.Controls.RemoveAt(0);
+            }
             openChildForm(new IngresarDatosEncomienda());
         }
 
-        private void iconButton16_Click(object sender, EventArgs e)
+        private void btnBuscarEnco_Click(object sender, EventArgs e)
         {
-            OcultarSubmenu();
+            ocultarSubMenu();
+            if (panelPrincipal.Controls.Count > 0)
+            {
+                panelPrincipal.Controls.RemoveAt(0);
+            }
             openChildForm(new BuscarDatosEncomienda());
         }
 
-        private void iconButton15_Click(object sender, EventArgs e)
+        private void btnViajes_Click(object sender, EventArgs e)
         {
-            OcultarSubmenu();
-            openChildForm(new ModificarDatosEncomienda());
+            MostrarSubMenu(panelSubMenuViajes);
+            if (panelPrincipal.Controls.Count > 0)
+            {
+                panelPrincipal.Controls.RemoveAt(0);
+            }
+
         }
 
-        private void iconButton14_Click(object sender, EventArgs e)
+        private void btnAgendarViaje_Click(object sender, EventArgs e)
         {
-            //OcultarSubmenu();
-            //openChildForm(new EliminarDatosEncomienda());
-        }
-
-        private void iconButton24_Click(object sender, EventArgs e)
-        {
-            OcultarSubmenu();
+            ocultarSubMenu();
+            if (panelPrincipal.Controls.Count > 0)
+            {
+                panelPrincipal.Controls.RemoveAt(0);
+            }
             openChildForm(new AgendarViaje());
         }
 
-        private void iconButton23_Click(object sender, EventArgs e)
+        private void btnContabilizarViaje_Click(object sender, EventArgs e)
         {
-            OcultarSubmenu();
+            ocultarSubMenu();
+            if (panelPrincipal.Controls.Count > 0)
+            {
+                panelPrincipal.Controls.RemoveAt(0);
+            }
             openChildForm(new ContabilizarViaje());
         }
 
-        private void iconButton22_Click(object sender, EventArgs e)
+        private void btnAgendaDeViaje_Click(object sender, EventArgs e)
         {
-            OcultarSubmenu();
+            ocultarSubMenu();
+            if (panelPrincipal.Controls.Count > 0)
+            {
+                panelPrincipal.Controls.RemoveAt(0);
+            }
             openChildForm(new AgendaDeViaje());
         }
 
-        private void iconButton20_Click(object sender, EventArgs e)
+        private void btnReportes_Click(object sender, EventArgs e)
         {
-            //
-            //
-            //
-            OcultarSubmenu();
-            if (panelPadre.Controls.Count > 0)
+            ocultarSubMenu();
+            if (panelPrincipal.Controls.Count > 0)
             {
-                panelPadre.Controls.RemoveAt(0);
+                panelPrincipal.Controls.RemoveAt(0);
             }
             openChildForm(new FormReportes());
 
         }
 
-        private void iconButton3_Click_1(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            OcultarSubmenu();
-            if (panelPadre.Controls.Count > 0)
+            Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ocultarSubMenu();
+            if (panelPrincipal.Controls.Count > 0)
             {
-            panelPadre.Controls.RemoveAt(0);
+                panelPrincipal.Controls.RemoveAt(0);
             }
             openChildForm(new FormInicio());
 
+        }
+
+       
+
+        private void btnModificarEnco_Click(object sender, EventArgs e)
+        {
+            ocultarSubMenu();
+            if (panelPrincipal.Controls.Count > 0)
+            {
+                panelPrincipal.Controls.RemoveAt(0);
+            }
+            openChildForm(new ModificarDatosEncomienda());
             
+        }
+
+        private void btnBuscarClientes_Click(object sender, EventArgs e)
+        {
+            ocultarSubMenu();
+           if (panelPrincipal.Controls.Count > 0)
+           {
+                panelPrincipal.Controls.RemoveAt(0);
+           }
+            openChildForm(new BuscarDatosCliente());
+            
+        }
+
+        private void btnModificarClientes_Click_1(object sender, EventArgs e)
+        {
+            ocultarSubMenu();
+            if (panelPrincipal.Controls.Count > 0)
+            {
+                panelPrincipal.Controls.RemoveAt(0);
+            }
+            openChildForm(new ModificarDatosCliente());
         }
     }
 }

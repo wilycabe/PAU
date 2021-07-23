@@ -191,7 +191,8 @@ namespace CapaLogica.Personas
         public static bool ExisteUsuario(string usuario)
         {
             // Aun por desarrollar
-            return Operaciones.ExisteUsuario(usuario).Rows.Count != 0;
+            //return Operaciones.ExisteUsuario(usuario).Rows.Count != 0;
+            return true;
         }
 
         /// <summary>

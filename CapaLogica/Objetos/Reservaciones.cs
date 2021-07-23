@@ -1,6 +1,6 @@
 ﻿namespace CapaLogica.Objetos
 {
-    public class Reservacione
+    public class Reservacion
     {
 
         public string Codigo { get; set; }
@@ -9,9 +9,11 @@
         public string CiudadDestino { get; set; }
         public string DireccionDestino { get; set; }
         public string FechaReservacion { get; set; }
-        public string ValorReservacion { get; set; }
+        public double ValorReservacion { get; set; }
+        public string CedulaChofer { get; set; }
+        public string CedulaCliente { get; set; }
 
-        public Reservacione()
+        public Reservacion()
         {
             Codigo = string.Empty;
             CiudadPartida = string.Empty;
@@ -19,10 +21,12 @@
             CiudadDestino = string.Empty;
             DireccionDestino = string.Empty;
             FechaReservacion = string.Empty;
-            ValorReservacion = string.Empty;
+            ValorReservacion = 0;
+            CedulaChofer = string.Empty;
+            CedulaCliente = string.Empty;
         }
 
-        public Reservacione(string codigo, string ciudadPartida, string direccionPartida, string ciudadDestino, string direccionDestino, string fechaReservacion, string valorReservacion)
+        public Reservacion(string codigo, string ciudadPartida, string direccionPartida, string ciudadDestino, string direccionDestino, string fechaReservacion, double valorReservacion, string cedulaChofer, string cedulaCliente)
         {
             Codigo = codigo;
             CiudadPartida = ciudadPartida;
@@ -31,7 +35,10 @@
             DireccionDestino = direccionDestino;
             FechaReservacion = fechaReservacion;
             ValorReservacion = valorReservacion;
+            CedulaCliente = cedulaCliente;
+            CedulaChofer = cedulaChofer;
         }
 
+        
     }
 }

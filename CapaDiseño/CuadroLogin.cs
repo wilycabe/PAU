@@ -34,28 +34,30 @@ namespace CapaDiseño
             {
                 txtUser.Text = "Usuario";
                 txtUser.ForeColor = Color.DimGray;
-            }
-        }
-
-        private void txtPass_Enter(object sender, EventArgs e)
-        {
-            if (txtUser.Text == "Usuario")
-            {
-                txtUser.Text = "";
-                txtUser.ForeColor = Color.LightGray;
-            }
-        }
-
-        private void txtPass_Leave(object sender, EventArgs e)
-        {
-            if (txtUser.Text == "")
-            {
-                txtUser.Text = "Contraseña";
-                txtUser.ForeColor = Color.DimGray;
                 txtPass.UseSystemPasswordChar = true;
             }
         }
 
+    
+
+        private void txtPass_Leave(object sender, EventArgs e)
+        {
+            if (txtPass.Text == "")
+            {
+                txtPass.Text = "Contraseña";
+                txtPass.ForeColor = Color.DimGray;
+                txtPass.UseSystemPasswordChar = false;
+            }
+        }
+        private void txtPass_Enter(object sender, EventArgs e)
+        {
+            if (txtPass.Text == "Contraseña")
+            {
+                txtPass.Text = "";
+                txtPass.ForeColor = Color.LightGray;
+                txtPass.UseSystemPasswordChar = true;
+            }
+        }
         private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -75,12 +77,28 @@ namespace CapaDiseño
         private void btnAcceder_Click(object sender, EventArgs e)
         {
             var usuario = txtUser.Text;
-            var pass = txtPass.Text;
-            var oObj = new Operaciones();
-            oObj.ConectarBaseDatos();
-            if (Operaciones.ValidadUsuarioContrasena(usuario, pass) != true) return;
-            var oPantalla = new PantallaPrincipal();
-            oPantalla.Show();
+            var contrasena = txtPass.Text;
+            if (OperacionesLl.ValidarUsuarioContrasena(usuario, contrasena))
+            {
+                var parentForm = ParentForm;
+                parentForm?.Hide();
+                var oWel = new Welcome();
+                oWel.ShowDialog();
+                var oPrinci = new PantallaPrincipal();
+                oPrinci.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show(@"El usuairio no existe", @"Información", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
         }
+
+        private void CuadroLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
