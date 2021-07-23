@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaLogica.Objetos;
 using CapaLogica.Personas;
 
-namespace CapaDiseño
+namespace CapaDiseño.Personal
 {
     public partial class IngresarDatosPersonal : Form
     {
@@ -45,12 +38,8 @@ namespace CapaDiseño
             if (!Chofer.VerificarCelular(txtCelular.Text)) return false;
             if (!Vehiculo.ValidarPlaca(txtPlaca.Text)) return false;
             if (!Chofer.VerificarCorreo(txtCorreo.Text)) return false;
+            if (!Chofer.VerificarMayoriaEdad(dateTimePicker.Text)) return false;
             return true;
-        }
-
-        private void IngresarDatosPersonal_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void bntIngresar_Click(object sender, EventArgs e)
@@ -65,12 +54,12 @@ namespace CapaDiseño
                     Celular = txtCelular.Text,
                     Correo = txtCorreo.Text,
                     Direccion = txtDireccion.Text,
-                    FechaNacimineto = "1999-04-13"
+                    FechaNacimineto = dateTimePicker.Text,
                 };
                 var vehiculo = new Vehiculo()
                 {
                     Placa = txtPlaca.Text,
-                    Agno = 0,
+                    Agno = int.Parse(txtAgno.Text),
                     CedulaChofer = txtCedula.Text,
                     Color = txtColor.Text,
                     Marca = txtMarcaVehiculo.Text,

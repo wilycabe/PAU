@@ -320,5 +320,10 @@ namespace CapaLogica.Objetos
         {
             return Operaciones.BuscarVehiculoPorChofer(cedula);
         }
+
+        public static DataTable Choferes()
+        {
+            return Operaciones.Choferes();
+        }
     }
 }

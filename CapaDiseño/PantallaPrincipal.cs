@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaDiseño.Personal;
 
 namespace CapaDiseño
 {
@@ -16,7 +10,6 @@ namespace CapaDiseño
         {
             InitializeComponent();
             visibilidad();
-            
         }
 
         private void visibilidad()
@@ -74,7 +67,7 @@ namespace CapaDiseño
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void openChildForm(Form childForm) // Metodo para abrir panel hijo en panel padre
+        private void OpenChildForm(Form childForm) // Metodo para abrir panel hijo en panel padre
         {
 
             foreach (Form ActiveForm in panelPrincipal.Controls) ActiveForm.Close();
@@ -116,7 +109,7 @@ namespace CapaDiseño
             {
                 panelPrincipal.Controls.RemoveAt(0);
             }
-            openChildForm(new IngresarDatosPersonal());
+            OpenChildForm(new IngresarDatosPersonal());
 
         }
 
@@ -127,7 +120,7 @@ namespace CapaDiseño
             {
                 panelPrincipal.Controls.RemoveAt(0);
             }
-            openChildForm(new BuscarDatosPersonal());
+            OpenChildForm(new BuscarDatosPersonal());
         }
 
         private void btnModificarPersonal_Click(object sender, EventArgs e)
@@ -137,7 +130,7 @@ namespace CapaDiseño
             {
                 panelPrincipal.Controls.RemoveAt(0);
             }
-            openChildForm(new ModificarDatosPersonal());
+            OpenChildForm(new ModificarDatosPersonal());
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
@@ -157,7 +150,7 @@ namespace CapaDiseño
             {
                 panelPrincipal.Controls.RemoveAt(0);
             }
-            openChildForm(new IngresarDatosCliente());
+            OpenChildForm(new IngresarDatosCliente());
         }
 
         
@@ -169,7 +162,7 @@ namespace CapaDiseño
             {
                 panelPrincipal.Controls.RemoveAt(0);
             }
-            openChildForm(new ModificarDatosCliente());
+            OpenChildForm(new ModificarDatosCliente());
         }
 
         private void btnIngresarEnco_Click(object sender, EventArgs e)
@@ -179,7 +172,7 @@ namespace CapaDiseño
             {
                 panelPrincipal.Controls.RemoveAt(0);
             }
-            openChildForm(new IngresarDatosEncomienda());
+            OpenChildForm(new IngresarDatosEncomienda());
         }
 
         private void btnBuscarEnco_Click(object sender, EventArgs e)
@@ -189,7 +182,7 @@ namespace CapaDiseño
             {
                 panelPrincipal.Controls.RemoveAt(0);
             }
-            openChildForm(new BuscarDatosEncomienda());
+            OpenChildForm(new BuscarDatosEncomienda());
         }
 
         private void btnViajes_Click(object sender, EventArgs e)
@@ -209,7 +202,7 @@ namespace CapaDiseño
             {
                 panelPrincipal.Controls.RemoveAt(0);
             }
-            openChildForm(new AgendarViaje());
+            OpenChildForm(new AgendarViaje());
         }
 
         private void btnContabilizarViaje_Click(object sender, EventArgs e)
@@ -219,7 +212,7 @@ namespace CapaDiseño
             {
                 panelPrincipal.Controls.RemoveAt(0);
             }
-            openChildForm(new ContabilizarViaje());
+            OpenChildForm(new ContabilizarViaje());
         }
 
         private void btnAgendaDeViaje_Click(object sender, EventArgs e)
@@ -229,7 +222,7 @@ namespace CapaDiseño
             {
                 panelPrincipal.Controls.RemoveAt(0);
             }
-            openChildForm(new AgendaDeViaje());
+            OpenChildForm(new AgendaDeViaje());
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
@@ -239,7 +232,7 @@ namespace CapaDiseño
             {
                 panelPrincipal.Controls.RemoveAt(0);
             }
-            openChildForm(new FormReportes());
+            OpenChildForm(new FormReportes());
 
         }
 
@@ -260,7 +253,7 @@ namespace CapaDiseño
             {
                 panelPrincipal.Controls.RemoveAt(0);
             }
-            openChildForm(new FormInicio());
+            OpenChildForm(new FormInicio());
 
         }
 
@@ -273,7 +266,7 @@ namespace CapaDiseño
             {
                 panelPrincipal.Controls.RemoveAt(0);
             }
-            openChildForm(new ModificarDatosEncomienda());
+            OpenChildForm(new ModificarDatosEncomienda());
             
         }
 
@@ -284,7 +277,7 @@ namespace CapaDiseño
            {
                 panelPrincipal.Controls.RemoveAt(0);
            }
-            openChildForm(new BuscarDatosCliente());
+            OpenChildForm(new BuscarDatosCliente());
             
         }
 
@@ -295,7 +288,7 @@ namespace CapaDiseño
             {
                 panelPrincipal.Controls.RemoveAt(0);
             }
-            openChildForm(new ModificarDatosCliente());
+            OpenChildForm(new ModificarDatosCliente());
         }
     }
 }

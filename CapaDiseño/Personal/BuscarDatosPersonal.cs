@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaDiseño.Personal.Reporte;
 using CapaLogica.Objetos;
 
 namespace CapaDiseño
 {
     public partial class BuscarDatosPersonal : Form
     {
+
+        DataTable tabla = OperacionesLl.Choferes();
+
         public BuscarDatosPersonal()
         {
             InitializeComponent();
@@ -56,6 +60,37 @@ namespace CapaDiseño
                 MessageBox.Show(@"Selecione primero una fila", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
+        }
+
+        private void BuscarDatosPersonal_Load(object sender, EventArgs e)
+        {
+            dgvBuscarPersonal.DataSource = tabla;
+        }
+
+        private void txtBuscarPersonal_Enter(object sender, EventArgs e)
+        {
+            if (txtBuscarPersonal.Text == @"Ingrese la cedula de un chofer")
+            {
+                txtBuscarPersonal.Text = "";
+                txtBuscarPersonal.ForeColor = Color.DimGray;
+
+            }
+        }
+
+        private void txtBuscarPersonal_Leave(object sender, EventArgs e)
+        {
+            if (txtBuscarPersonal.Text == @"")
+            {
+                txtBuscarPersonal.Text = "Ingrese la cedula de un chofer";
+                txtBuscarPersonal.ForeColor = Color.DarkGray;
+                dgvBuscarPersonal.DataSource = tabla;
+            }
+        }
+
+        private void Reporte_Click(object sender, EventArgs e)
+        {
+            Reporte reporte = new Reporte();
+            reporte.Show();
         }
     }
 }

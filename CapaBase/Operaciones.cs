@@ -706,5 +706,34 @@ namespace CapaBase
                 return _tabla;
             }
         }
+
+        public static DataTable Choferes()
+        {
+            try
+            {
+                Conexion.Abrir();
+                _tabla = new DataTable();
+                var cmdText = $"SELECT * FROM chofer";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                SqlDataAdapter adapter = new() { SelectCommand = command };
+                adapter.Fill(_tabla);
+                _tabla.Columns[0].ColumnName = "Cédula";
+                _tabla.Columns[1].ColumnName = "Nombre";
+                _tabla.Columns[2].ColumnName = "Apellido";
+                _tabla.Columns[3].ColumnName = "Celular";
+                _tabla.Columns[4].ColumnName = "Correo";
+                _tabla.Columns[5].ColumnName = "Dirección";
+                _tabla.Columns[6].ColumnName = "Fecha de Nacimiento";
+                _tabla.AcceptChanges();
+                Conexion.Cerrar();
+                return _tabla;
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+                _tabla = null;
+                return _tabla;
+            }
+        }
     }
 }

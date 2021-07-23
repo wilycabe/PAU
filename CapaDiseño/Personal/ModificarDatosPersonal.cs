@@ -32,8 +32,7 @@ namespace CapaDiseño
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            var cedula = textBuscar.Text;
-            
+            var cedula = txtBuscar.Text;
             var vehiculo = OperacionesLl.BuscarVehiculoPorChofer(cedula);
             var chofer = OperacionesLl.BuscarChofer(cedula);
             if (chofer.Rows.Count > 0 && vehiculo.Rows.Count > 0)
@@ -45,14 +44,29 @@ namespace CapaDiseño
                 txtCelular.Text = fila[3].ToString();
                 txtCorreo.Text = fila[4].ToString();
                 txtDireccion.Text = fila[5].ToString();
-                var fila2 = vehiculo.Rows[0];
-                txtPlaca.Text = fila2[0].ToString();
-                txtModeloVehi.Text = fila2[1].ToString();
-                txtMarcaVehiculo.Text = fila2[2].ToString();
-                txtColor.Text = fila2[3].ToString();
+                dateTimePicker.Text = fila[6].ToString();
+                fila = vehiculo.Rows[0];
+                txtPlaca.Text = fila[0].ToString();
+                txtModeloVehi.Text = fila[1].ToString();
+                txtMarcaVehiculo.Text = fila[2].ToString();
+                txtColor.Text = fila[3].ToString();
+                txtAgno.Text = fila[5].ToString();
+                MessageBox.Show(@"Se han encontrado coincidencias y se ha cargado la información al formulario", @"Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
+                txtCedula.Text = string.Empty;
+                txtNombre.Text = string.Empty;
+                txtApellido.Text = string.Empty;
+                txtCelular.Text = string.Empty;
+                txtCorreo.Text = string.Empty;
+                txtDireccion.Text = string.Empty;
+                dateTimePicker.Text = string.Empty;
+                txtPlaca.Text = string.Empty;
+                txtModeloVehi.Text = string.Empty;
+                txtMarcaVehiculo.Text = string.Empty;
+                txtColor.Text = string.Empty;
+                txtAgno.Text = string.Empty;
                 MessageBox.Show(@"No se han encontrado coincidencias", @"Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -69,12 +83,12 @@ namespace CapaDiseño
                     Celular = txtCelular.Text,
                     Correo = txtCorreo.Text,
                     Direccion = txtDireccion.Text,
-                    FechaNacimineto = "1999-04-13"
+                    FechaNacimineto = dateTimePicker.Text,
                 };
                 var vehiculo = new Vehiculo()
                 {
                     Placa = txtPlaca.Text,
-                    Agno = 0,
+                    Agno = int.Parse(txtAgno.Text),
                     CedulaChofer = txtCedula.Text,
                     Color = txtColor.Text,
                     Marca = txtMarcaVehiculo.Text,
@@ -90,5 +104,25 @@ namespace CapaDiseño
                     MessageBoxIcon.Information);
             }
         }
+
+        private void txtBuscar_Enter(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == @"Ingrese la cedula de un chofer")
+            {
+                txtBuscar.Text = "";
+                txtBuscar.ForeColor = Color.DimGray;
+
+            }
+        }
+
+        private void txtBuscar_Leave(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == @"")
+            {
+                txtBuscar.Text = "Ingrese la cedula de un chofer";
+                txtBuscar.ForeColor = Color.DarkGray;
+            }
+        }
+        
     }
 }

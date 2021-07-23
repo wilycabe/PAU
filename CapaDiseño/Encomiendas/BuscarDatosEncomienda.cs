@@ -16,5 +16,10 @@ namespace CapaDiseño
         {
             InitializeComponent();
         }
+
+        private void BuscarDatosEncomienda_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

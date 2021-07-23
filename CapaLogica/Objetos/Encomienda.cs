@@ -19,6 +19,8 @@ namespace CapaLogica.Objetos
         public string DireccionLlegada { get; set; }
         public string CedulaChofer { get; set; }
 
+        public string Dimensiones { get; set; }
+
         public Encomienda()
         {
             Codigo = string.Empty;
@@ -34,9 +36,10 @@ namespace CapaLogica.Objetos
             CedulaCliente = string.Empty;
             CedulaDestinatario = string.Empty;
             CedulaChofer = string.Empty;
+            Dimensiones = string.Empty;
         }
 
-        public Encomienda(string codigo, double peso, string descripcion, string fechaEnvio, string codigoPostal, string ciudadEnvio, string direccionEnvio, string ciudadLlegada, string direccionLlegada, double valorEncomienda, string cedulaCliente, string cedulaDestinatario, string cedulaChofer)
+        public Encomienda(string codigo, double peso, string descripcion, string fechaEnvio, string codigoPostal, string ciudadEnvio, string direccionEnvio, string ciudadLlegada, string direccionLlegada, double valorEncomienda, string cedulaCliente, string cedulaDestinatario, string cedulaChofer, string dimensiones)
         {
             Codigo = codigo;
             Peso = peso;
@@ -51,7 +54,11 @@ namespace CapaLogica.Objetos
             CedulaCliente = cedulaCliente;
             CedulaDestinatario = cedulaDestinatario;
             CedulaChofer = cedulaChofer;
+            Dimensiones = dimensiones;
         }
+
+        
+
 
     }
 }
