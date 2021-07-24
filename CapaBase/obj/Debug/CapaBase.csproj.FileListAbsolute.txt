@@ -15,3 +15,4 @@ C:\Users\USER\Source\Repos\wilycabe\PAU\CapaBase\obj\Debug\CapaBase.csproj.Assem
 C:\Users\USER\Source\Repos\wilycabe\PAU\CapaBase\obj\Debug\CapaBase.csproj.CoreCompileInputs.cache
 C:\Users\USER\Source\Repos\wilycabe\PAU\CapaBase\obj\Debug\CapaBase.dll
 C:\Users\USER\Source\Repos\wilycabe\PAU\CapaBase\obj\Debug\CapaBase.pdb
+C:\Users\lives\source\repos\wilycabe\PAU\CapaBase\obj\Debug\CapaBase.csproj.AssemblyReference.cache

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace CapaLogica.Objetos
 {
@@ -57,8 +58,32 @@ namespace CapaLogica.Objetos
             Dimensiones = dimensiones;
         }
 
-        
+        public static bool VerificarDimensiones(string cadena)
+        {
+            var dimenesion = cadena.ToUpper().Split('X');
+            if (dimenesion.Length is < 2 or > 3)
+            {
+                return false;
+            }
+            try
+            {
+                return int.TryParse(dimenesion[0], out _) && int.TryParse(dimenesion[1], out _) && int.TryParse(dimenesion[2], out _);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
 
+        public static bool VerificarPeso(double peso)
+        {
+            return true;
+        }
 
+        public static bool VerificarFechaEnvio(string fecha)
+        {
+            var date = DateTime.Parse(fecha);
+            return date.DayOfYear > DateTime.Now.DayOfYear;
+        }
     }
 }

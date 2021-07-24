@@ -1,5 +1,5 @@
 ﻿
-namespace CapaDiseño
+namespace CapaDiseño.Encomiendas
 {
     partial class BuscarDatosEncomienda
     {
@@ -118,7 +118,9 @@ namespace CapaDiseño
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(404, 27);
             this.txtBuscar.TabIndex = 23;
-            this.txtBuscar.Text = "Ingrese la cedula de un chofer";
+            this.txtBuscar.Text = "Ingrese el código de una encomienda";
+            this.txtBuscar.Enter += new System.EventHandler(this.txtBuscar_Enter);
+            this.txtBuscar.Leave += new System.EventHandler(this.txtBuscar_Leave);
             // 
             // BuscarDatosEncomienda
             // 

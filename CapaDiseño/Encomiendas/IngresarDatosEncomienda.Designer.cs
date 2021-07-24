@@ -44,7 +44,7 @@ namespace CapaDiseño
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.txtDireccionDestino = new System.Windows.Forms.TextBox();
+            this.txtDireccionDestinatario = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuSeparator4 = new Bunifu.Framework.UI.BunifuSeparator();
@@ -70,6 +70,12 @@ namespace CapaDiseño
             this.bunifuSeparator5 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label16 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.txtDireccionLLegada = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.bunifuSeparator8 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.txtDireccionEnvio = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.bunifuSeparator9 = new Bunifu.Framework.UI.BunifuSeparator();
             this.SuspendLayout();
             // 
             // txtDimenConte
@@ -92,7 +98,7 @@ namespace CapaDiseño
             this.txtCedulaCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCedulaCliente.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtCedulaCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtCedulaCliente.Location = new System.Drawing.Point(608, 347);
+            this.txtCedulaCliente.Location = new System.Drawing.Point(608, 420);
             this.txtCedulaCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtCedulaCliente.Name = "txtCedulaCliente";
             this.txtCedulaCliente.Size = new System.Drawing.Size(167, 20);
@@ -170,7 +176,7 @@ namespace CapaDiseño
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(470, 344);
+            this.label5.Location = new System.Drawing.Point(470, 417);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(133, 21);
@@ -268,18 +274,18 @@ namespace CapaDiseño
             this.txtTelefono.Size = new System.Drawing.Size(240, 20);
             this.txtTelefono.TabIndex = 36;
             // 
-            // txtDireccionDestino
+            // txtDireccionDestinatario
             // 
-            this.txtDireccionDestino.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDireccionDestino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.txtDireccionDestino.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDireccionDestino.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txtDireccionDestino.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtDireccionDestino.Location = new System.Drawing.Point(56, 270);
-            this.txtDireccionDestino.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDireccionDestino.Name = "txtDireccionDestino";
-            this.txtDireccionDestino.Size = new System.Drawing.Size(242, 20);
-            this.txtDireccionDestino.TabIndex = 35;
+            this.txtDireccionDestinatario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDireccionDestinatario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.txtDireccionDestinatario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDireccionDestinatario.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtDireccionDestinatario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtDireccionDestinatario.Location = new System.Drawing.Point(56, 270);
+            this.txtDireccionDestinatario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDireccionDestinatario.Name = "txtDireccionDestinatario";
+            this.txtDireccionDestinatario.Size = new System.Drawing.Size(242, 20);
+            this.txtDireccionDestinatario.TabIndex = 35;
             // 
             // txtNombre
             // 
@@ -385,7 +391,7 @@ namespace CapaDiseño
             this.txtCiudadLLegada.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCiudadLLegada.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtCiudadLLegada.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtCiudadLLegada.Location = new System.Drawing.Point(609, 262);
+            this.txtCiudadLLegada.Location = new System.Drawing.Point(609, 291);
             this.txtCiudadLLegada.Margin = new System.Windows.Forms.Padding(2);
             this.txtCiudadLLegada.Name = "txtCiudadLLegada";
             this.txtCiudadLLegada.Size = new System.Drawing.Size(166, 20);
@@ -397,7 +403,7 @@ namespace CapaDiseño
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(437, 262);
+            this.label12.Location = new System.Drawing.Point(437, 291);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(166, 21);
@@ -411,7 +417,7 @@ namespace CapaDiseño
             this.bunifuSeparator12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuSeparator12.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator12.LineThickness = 1;
-            this.bunifuSeparator12.Location = new System.Drawing.Point(609, 265);
+            this.bunifuSeparator12.Location = new System.Drawing.Point(609, 294);
             this.bunifuSeparator12.Name = "bunifuSeparator12";
             this.bunifuSeparator12.Size = new System.Drawing.Size(166, 35);
             this.bunifuSeparator12.TabIndex = 70;
@@ -425,7 +431,7 @@ namespace CapaDiseño
             this.txtPreciollegada.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPreciollegada.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtPreciollegada.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtPreciollegada.Location = new System.Drawing.Point(609, 301);
+            this.txtPreciollegada.Location = new System.Drawing.Point(609, 374);
             this.txtPreciollegada.Margin = new System.Windows.Forms.Padding(2);
             this.txtPreciollegada.Name = "txtPreciollegada";
             this.txtPreciollegada.Size = new System.Drawing.Size(166, 20);
@@ -437,12 +443,12 @@ namespace CapaDiseño
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(449, 304);
+            this.label13.Location = new System.Drawing.Point(463, 377);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(154, 21);
+            this.label13.Size = new System.Drawing.Size(137, 21);
             this.label13.TabIndex = 74;
-            this.label13.Text = "Precio de llegada :";
+            this.label13.Text = "Precio de envío :";
             // 
             // bunifuSeparator13
             // 
@@ -451,7 +457,7 @@ namespace CapaDiseño
             this.bunifuSeparator13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuSeparator13.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator13.LineThickness = 1;
-            this.bunifuSeparator13.Location = new System.Drawing.Point(609, 304);
+            this.bunifuSeparator13.Location = new System.Drawing.Point(609, 377);
             this.bunifuSeparator13.Name = "bunifuSeparator13";
             this.bunifuSeparator13.Size = new System.Drawing.Size(166, 35);
             this.bunifuSeparator13.TabIndex = 73;
@@ -521,7 +527,7 @@ namespace CapaDiseño
             this.bunifuSeparator15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuSeparator15.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator15.LineThickness = 1;
-            this.bunifuSeparator15.Location = new System.Drawing.Point(608, 350);
+            this.bunifuSeparator15.Location = new System.Drawing.Point(608, 423);
             this.bunifuSeparator15.Name = "bunifuSeparator15";
             this.bunifuSeparator15.Size = new System.Drawing.Size(167, 35);
             this.bunifuSeparator15.TabIndex = 80;
@@ -621,12 +627,98 @@ namespace CapaDiseño
             this.label9.TabIndex = 86;
             this.label9.Text = "*si el destinatario ha sido registrado antes solo coloque el número de cedula*";
             // 
+            // txtDireccionLLegada
+            // 
+            this.txtDireccionLLegada.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDireccionLLegada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.txtDireccionLLegada.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDireccionLLegada.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtDireccionLLegada.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtDireccionLLegada.Location = new System.Drawing.Point(609, 334);
+            this.txtDireccionLLegada.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDireccionLLegada.Name = "txtDireccionLLegada";
+            this.txtDireccionLLegada.Size = new System.Drawing.Size(226, 20);
+            this.txtDireccionLLegada.TabIndex = 89;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(423, 334);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(180, 21);
+            this.label7.TabIndex = 88;
+            this.label7.Text = "Dirección de llegada :";
+            // 
+            // bunifuSeparator8
+            // 
+            this.bunifuSeparator8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuSeparator8.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bunifuSeparator8.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.bunifuSeparator8.LineThickness = 1;
+            this.bunifuSeparator8.Location = new System.Drawing.Point(609, 337);
+            this.bunifuSeparator8.Name = "bunifuSeparator8";
+            this.bunifuSeparator8.Size = new System.Drawing.Size(226, 35);
+            this.bunifuSeparator8.TabIndex = 87;
+            this.bunifuSeparator8.Transparency = 255;
+            this.bunifuSeparator8.Vertical = false;
+            // 
+            // txtDireccionEnvio
+            // 
+            this.txtDireccionEnvio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDireccionEnvio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.txtDireccionEnvio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDireccionEnvio.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtDireccionEnvio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtDireccionEnvio.Location = new System.Drawing.Point(609, 255);
+            this.txtDireccionEnvio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDireccionEnvio.Name = "txtDireccionEnvio";
+            this.txtDireccionEnvio.Size = new System.Drawing.Size(226, 20);
+            this.txtDireccionEnvio.TabIndex = 92;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label17.Location = new System.Drawing.Point(437, 255);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(163, 21);
+            this.label17.TabIndex = 91;
+            this.label17.Text = "Dirección de envío :";
+            // 
+            // bunifuSeparator9
+            // 
+            this.bunifuSeparator9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuSeparator9.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bunifuSeparator9.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.bunifuSeparator9.LineThickness = 1;
+            this.bunifuSeparator9.Location = new System.Drawing.Point(609, 258);
+            this.bunifuSeparator9.Name = "bunifuSeparator9";
+            this.bunifuSeparator9.Size = new System.Drawing.Size(226, 35);
+            this.bunifuSeparator9.TabIndex = 90;
+            this.bunifuSeparator9.Transparency = 255;
+            this.bunifuSeparator9.Vertical = false;
+            // 
             // IngresarDatosEncomienda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(906, 532);
+            this.Controls.Add(this.txtDireccionEnvio);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.bunifuSeparator9);
+            this.Controls.Add(this.txtDireccionLLegada);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.bunifuSeparator8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.textCorreo);
@@ -659,7 +751,7 @@ namespace CapaDiseño
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtPeso);
-            this.Controls.Add(this.txtDireccionDestino);
+            this.Controls.Add(this.txtDireccionDestinatario);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.bunifuSeparator2);
             this.Controls.Add(this.bunifuSeparator3);
@@ -693,7 +785,7 @@ namespace CapaDiseño
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtDireccionDestino;
+        private System.Windows.Forms.TextBox txtDireccionDestinatario;
         private System.Windows.Forms.TextBox txtNombre;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator3;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator4;
@@ -719,5 +811,11 @@ namespace CapaDiseño
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator5;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtDireccionLLegada;
+        private System.Windows.Forms.Label label7;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator8;
+        private System.Windows.Forms.TextBox txtDireccionEnvio;
+        private System.Windows.Forms.Label label17;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator9;
     }
 }

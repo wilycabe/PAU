@@ -130,7 +130,6 @@ namespace CapaDiseño
             this.Reporte.TabIndex = 22;
             this.Reporte.Text = "Generar reporte";
             this.Reporte.UseVisualStyleBackColor = true;
-            this.Reporte.Click += new System.EventHandler(this.Reporte_Click);
             // 
             // BuscarDatosPersonal
             // 

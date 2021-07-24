@@ -735,5 +735,37 @@ namespace CapaBase
                 return _tabla;
             }
         }
+
+        public static DataTable Encomiendas()
+        {
+            try
+            {
+                Conexion.Abrir();
+                _tabla = new DataTable();
+                var cmdText = $"SELECT * FROM encomienda";
+                SqlCommand command = new(cmdText, Conexion.Conectar);
+                SqlDataAdapter adapter = new() { SelectCommand = command };
+                adapter.Fill(_tabla);
+                _tabla.Columns[1].ColumnName = "Código";
+                _tabla.Columns[2].ColumnName = "Ciudad envío";
+                _tabla.Columns[3].ColumnName = "Dirección envío";
+                _tabla.Columns[4].ColumnName = "Ciudad llegada";
+                _tabla.Columns[5].ColumnName = "Dirección llegada";
+                _tabla.Columns[6].ColumnName = "Fecha";
+                _tabla.Columns[7].ColumnName = "Valor";
+                _tabla.Columns[10].ColumnName = "Peso";
+                _tabla.Columns[11].ColumnName = "Cedula destinatario";
+                _tabla.Columns[12].ColumnName = "Cedula cliente";
+                _tabla.AcceptChanges();
+                Conexion.Cerrar();
+                return _tabla;
+            }
+            catch (Exception)
+            {
+                Conexion.Cerrar();
+                _tabla = null;
+                return _tabla;
+            }
+        }
     }
 }

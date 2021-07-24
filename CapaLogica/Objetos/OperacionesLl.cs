@@ -325,5 +325,10 @@ namespace CapaLogica.Objetos
         {
             return Operaciones.Choferes();
         }
+
+        public static DataTable Encomiendas()
+        {
+            return Operaciones.Encomiendas();
+        }
     }
 }

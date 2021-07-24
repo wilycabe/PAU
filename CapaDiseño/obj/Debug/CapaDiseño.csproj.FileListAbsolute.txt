@@ -171,7 +171,6 @@ C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\obj\Debug\CapaDiseño.Ingre
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\obj\Debug\CapaDiseño.ModificarDatosCliente.resources
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\obj\Debug\CapaDiseño.CuadroLogin.resources
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\obj\Debug\CapaDiseño.EliminarUsuario.resources
-C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\obj\Debug\CapaDiseño.BuscarDatosEncomienda.resources
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\obj\Debug\CapaDiseño.IngresarDatosEncomienda.resources
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\obj\Debug\CapaDiseño.ModificarDatosEncomienda.resources
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\obj\Debug\CapaDiseño.FormInicio.resources
@@ -195,12 +194,9 @@ C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\obj\Debug\CapaDiseño.Perso
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\PAU.mdf
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\PAU_log.ldf
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\Microsoft.ReportViewer.WinForms.dll
-C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\obj\Debug\RdlCompile.cache
-C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\obj\Debug\RdlCompile.compiled
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\Microsoft.ReportViewer.Common.dll
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
-C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\obj\Debug\CapaDiseño.Personal.Reporte.Reporte.resources
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -255,3 +251,4 @@ C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\pt\Microsoft.Repo
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\lives\source\repos\wilycabe\PAU\CapaDiseño\obj\Debug\CapaDiseño.Encomiendas.BuscarDatosEncomienda.resources
