@@ -79,6 +79,64 @@
     <Compile Include="CuadroLogin.Designer.cs">
       <DependentUpon>CuadroLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="PAUDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PAUDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Form Reportes Secundarios\DataSetPrincipal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPrincipal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Form Reportes Secundarios\FormReporteChofer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Form Reportes Secundarios\FormReporteChofer.Designer.cs">
+      <DependentUpon>FormReporteChofer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Form Reportes Secundarios\FormReporteClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Form Reportes Secundarios\FormReporteClientes.Designer.cs">
+      <DependentUpon>FormReporteClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Form Reportes Secundarios\FormReporteDestinatario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Form Reportes Secundarios\FormReporteDestinatario.Designer.cs">
+      <DependentUpon>FormReporteDestinatario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Form Reportes Secundarios\FormReporteEncomienda_Pen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Form Reportes Secundarios\FormReporteEncomienda_Pen.Designer.cs">
+      <DependentUpon>FormReporteEncomienda_Pen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Form Reportes Secundarios\FormReporteEncomienda_Real.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Form Reportes Secundarios\FormReporteEncomienda_Real.Designer.cs">
+      <DependentUpon>FormReporteEncomienda_Real.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Form Reportes Secundarios\FormReporteReservaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Form Reportes Secundarios\FormReporteReservaciones.Designer.cs">
+      <DependentUpon>FormReporteReservaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Form Reportes Secundarios\FormReporteUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Form Reportes Secundarios\FormReporteUsuario.Designer.cs">
+      <DependentUpon>FormReporteUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Form Reportes Secundarios\FormReporteVechiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Form Reportes Secundarios\FormReporteVechiculos.Designer.cs">
+      <DependentUpon>FormReporteVechiculos.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Viajes\AgendaDeViaje.cs">
       <SubType>Form</SubType>
@@ -235,6 +293,31 @@
     <EmbeddedResource Include="Personal\ModificarDatosPersonal.resx">
       <DependentUpon>ModificarDatosPersonal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Form Reportes Secundarios\FormReporteChofer.resx">
+      <DependentUpon>FormReporteChofer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Form Reportes Secundarios\FormReporteClientes.resx">
+      <DependentUpon>FormReporteClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Form Reportes Secundarios\FormReporteDestinatario.resx">
+      <DependentUpon>FormReporteDestinatario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Form Reportes Secundarios\FormReporteEncomienda_Pen.resx">
+      <DependentUpon>FormReporteEncomienda_Pen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Form Reportes Secundarios\FormReporteEncomienda_Real.resx">
+      <DependentUpon>FormReporteEncomienda_Real.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Form Reportes Secundarios\FormReporteReservaciones.resx">
+      <DependentUpon>FormReporteReservaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Form Reportes Secundarios\FormReporteUsuario.resx">
+      <DependentUpon>FormReporteUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Form Reportes Secundarios\FormReporteVechiculos.resx">
+      <DependentUpon>FormReporteVechiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RDLC\Chofer.rdlc" />
     <EmbeddedResource Include="Reportes\FormReportes.resx">
       <DependentUpon>FormReportes.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,6 +337,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\RDLC\Cliente.rdlc" />
+    <EmbeddedResource Include="Reportes\RDLC\Encomienda_Rea.rdlc" />
+    <EmbeddedResource Include="Reportes\RDLC\Encomienda_Pen.rdlc" />
+    <EmbeddedResource Include="Reportes\RDLC\Reservacion.rdlc" />
+    <EmbeddedResource Include="Reportes\RDLC\Usuario.rdlc" />
+    <EmbeddedResource Include="Reportes\RDLC\Vehiculo.rdlc" />
+    <EmbeddedResource Include="Reportes\RDLC\Destinatario.rdlc" />
     <EmbeddedResource Include="Viajes\AgendaDeViaje.resx">
       <DependentUpon>AgendaDeViaje.cs</DependentUpon>
     </EmbeddedResource>
@@ -267,6 +357,17 @@
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="PAUDataSet.xsc">
+      <DependentUpon>PAUDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PAUDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PAUDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PAUDataSet.xss">
+      <DependentUpon>PAUDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\DataSources\CapaBase.Conexion.datasource" />
     <None Include="Properties\DataSources\CapaBase.Operaciones.datasource" />
     <None Include="Properties\DataSources\CapaBase.PAUDataSet+choferDataTable.datasource" />
@@ -291,6 +392,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Reportes\Form Reportes Secundarios\DataSetPrincipal.xsc">
+      <DependentUpon>DataSetPrincipal.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Form Reportes Secundarios\DataSetPrincipal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPrincipal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\Form Reportes Secundarios\DataSetPrincipal.xss">
+      <DependentUpon>DataSetPrincipal.xsd</DependentUpon>
+    </None>
     <None Include="Resources\Close_Icon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -378,5 +490,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
