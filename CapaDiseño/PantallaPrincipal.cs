@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 using CapaDiseño.Encomiendas;
 using CapaDiseño.Personal;
@@ -290,6 +291,12 @@ namespace CapaDiseño
                 panelPrincipal.Controls.RemoveAt(0);
             }
             OpenChildForm(new ModificarDatosCliente());
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo sInfo = new ProcessStartInfo("file:///C:/Users/wilyc/Desktop/PAU_falta%20reportes%20y%20un%20par%20de%20cosas/PAU/PAU/Ayuda/index.html");
+            Process.Start(sInfo);
         }
     }
 }
