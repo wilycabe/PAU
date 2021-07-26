@@ -65,7 +65,7 @@ namespace CapaDiseño
                 try
                 {
                     Usuario.VerificarNick(txtUser.Text);
-
+                    txtPass.Focus();
                 }
                 catch(ArgumentException)
                 {
@@ -99,6 +99,20 @@ namespace CapaDiseño
 
         }
 
-        
+        private void txtPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if( e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+                    btnAcceder.Focus();
+                }
+                catch
+                {
+                    MessageBox.Show("Ingrese una contraseña", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                    txtPass.Focus();
+                }
+            }
+        }
     }
 }

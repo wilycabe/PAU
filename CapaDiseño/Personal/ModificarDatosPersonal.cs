@@ -123,6 +123,336 @@ namespace CapaDiseño
                 txtBuscar.ForeColor = Color.DarkGray;
             }
         }
-        
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if( e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+                    if(txtNombre.Text == "")
+                    {
+                        MessageBox.Show("Los campos no pueden estar vacíos", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                        txtNombre.Focus();
+                    }
+                    else
+                    {
+                        txtApellido.Focus();
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Los campos no pueden estar vacíos", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                    txtNombre.Focus();
+                }
+                  
+            }
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+
+                    if (txtApellido.Text == "")
+                    {
+                        MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                        txtApellido.Focus();
+                    }
+                    else
+                    {
+                        txtCedula.Focus();
+                    }
+
+
+
+                }
+                catch
+                {
+                    MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                    txtApellido.Focus();
+                }
+            }
+        }
+
+        private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+
+                    if (txtCedula.Text == "")
+                    {
+                        MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                        txtCedula.Focus();
+                    }
+                    else
+                    {
+                        txtDireccion.Focus();
+                    }
+
+
+
+                }
+                catch
+                {
+                    MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                    txtCedula.Focus();
+                }
+            }
+        }
+
+        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+
+                    if (txtDireccion.Text == "")
+                    {
+                        MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                        txtDireccion.Focus();
+                    }
+                    else
+                    {
+                        txtCelular.Focus();
+                    }
+
+
+
+                }
+                catch
+                {
+                    MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                    txtDireccion.Focus();
+                }
+            }
+        }
+
+        private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+
+                    if (txtCelular.Text == "")
+                    {
+                        MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                        txtCelular.Focus();
+                    }
+                    else
+                    {
+                        txtCorreo.Focus();
+                    }
+
+
+
+                }
+                catch
+                {
+                    MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                    txtCelular.Focus();
+                }
+            }
+        }
+
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+
+                    if (txtCorreo.Text == "")
+                    {
+                        MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                        txtCorreo.Focus();
+                    }
+                    else
+                    {
+                        dateTimePicker.Focus();
+                    }
+
+
+
+                }
+                catch
+                {
+                    MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                    txtCorreo.Focus();
+                }
+            }
+        }
+
+        private void dateTimePicker_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+                    if(dateTimePicker.Value > System.DateTime.Now)
+                    {
+                        MessageBox.Show("La fecha de nacimiento no puede ser mayor a la actual", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                        dateTimePicker.Focus();
+                    }
+                    else
+                    {
+                        txtMarcaVehiculo.Focus();
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("La fecha de nacimiento no puede ser mayor a la actual", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                    dateTimePicker.Focus();
+
+                }
+            }
+        }
+
+        private void txtMarcaVehiculo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+
+                    if (txtMarcaVehiculo.Text == "")
+                    {
+                        MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                        txtMarcaVehiculo.Focus();
+                    }
+                    else
+                    {
+                        txtModeloVehi.Focus();
+                    }
+
+
+
+                }
+                catch
+                {
+                    MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                    txtMarcaVehiculo.Focus();
+                }
+            }
+        }
+
+        private void txtModeloVehi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+
+                    if (txtModeloVehi.Text == "")
+                    {
+                        MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                        txtModeloVehi.Focus();
+                    }
+                    else
+                    {
+                        txtColor.Focus();
+                    }
+
+
+
+                }
+                catch
+                {
+                    MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                    txtModeloVehi.Focus();
+                }
+            }
+        }
+
+        private void txtColor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+
+                    if (txtColor.Text == "")
+                    {
+                        MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                        txtColor.Focus();
+                    }
+                    else
+                    {
+                        txtPlaca.Focus();
+                    }
+
+
+
+                }
+                catch
+                {
+                    MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                    txtColor.Focus();
+                }
+            }
+        }
+
+        private void txtPlaca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                try
+                {
+
+                    if (txtPlaca.Text == "")
+                    {
+                        MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                        txtPlaca.Focus();
+                    }
+                    else
+                    {
+                        txtAgno.Focus();
+                    }
+
+
+
+                }
+                catch
+                {
+                    MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                    txtPlaca.Focus();
+                }
+            }
+        }
+
+        private void txtAgno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+
+                try
+                {
+
+                    if (txtAgno.Text == "")
+                    {
+                        MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                        txtAgno.Focus();
+                    }
+                    else
+                    {
+                        button2.Focus();
+                    }
+
+
+
+                }
+                catch
+                {
+                    MessageBox.Show("El campo no puede estar vacío", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                    txtAgno.Focus();
+                }
+            }
+        }
     }
 }

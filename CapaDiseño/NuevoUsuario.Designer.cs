@@ -76,6 +76,7 @@ namespace CapaDiseño
             this.txtCorreo.TabIndex = 7;
             this.txtCorreo.Text = "Correo";
             this.txtCorreo.Enter += new System.EventHandler(this.txtCorreo_Enter);
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
             // 
             // txtNombre
@@ -91,6 +92,7 @@ namespace CapaDiseño
             this.txtNombre.TabIndex = 6;
             this.txtNombre.Text = "Nombre";
             this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // bunifuSeparator1
@@ -132,6 +134,7 @@ namespace CapaDiseño
             this.txtApellido.TabIndex = 11;
             this.txtApellido.Text = "Apellido";
             this.txtApellido.Enter += new System.EventHandler(this.txtApellido_Enter);
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             this.txtApellido.Leave += new System.EventHandler(this.txtApellido_Leave);
             // 
             // bunifuSeparator3
@@ -172,6 +175,7 @@ namespace CapaDiseño
             this.txtNombreUsuario.TabIndex = 14;
             this.txtNombreUsuario.Text = "Nombre de usuario";
             this.txtNombreUsuario.Enter += new System.EventHandler(this.txtNombreUsuario_Enter);
+            this.txtNombreUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreUsuario_KeyPress);
             this.txtNombreUsuario.Leave += new System.EventHandler(this.txtNombreUsuario_Leave);
             // 
             // bunifuSeparator4
@@ -200,6 +204,7 @@ namespace CapaDiseño
             this.txtContraseña.TabIndex = 16;
             this.txtContraseña.Text = "Contraseña";
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
+            this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
             this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
             // bunifuSeparator5
@@ -228,6 +233,7 @@ namespace CapaDiseño
             this.txtCedula.TabIndex = 18;
             this.txtCedula.Text = "Cedula";
             this.txtCedula.Enter += new System.EventHandler(this.txtCedula_Enter);
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             this.txtCedula.Leave += new System.EventHandler(this.txtCedula_Leave);
             // 
             // bunifuSeparator6

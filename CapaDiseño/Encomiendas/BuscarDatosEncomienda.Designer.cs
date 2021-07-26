@@ -29,7 +29,6 @@ namespace CapaDiseño.Encomiendas
         /// </summary>
         private void InitializeComponent()
         {
-            this.Reporte = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -39,22 +38,11 @@ namespace CapaDiseño.Encomiendas
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).BeginInit();
             this.SuspendLayout();
             // 
-            // Reporte
-            // 
-            this.Reporte.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.Reporte.Location = new System.Drawing.Point(500, 468);
-            this.Reporte.Margin = new System.Windows.Forms.Padding(2);
-            this.Reporte.Name = "Reporte";
-            this.Reporte.Size = new System.Drawing.Size(145, 29);
-            this.Reporte.TabIndex = 28;
-            this.Reporte.Text = "Generar reporte";
-            this.Reporte.UseVisualStyleBackColor = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapaDiseño.Properties.Resources.lupa;
-            this.pictureBox1.Location = new System.Drawing.Point(650, 35);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(867, 43);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -66,20 +54,19 @@ namespace CapaDiseño.Encomiendas
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(174, 44);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(194, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 21);
+            this.label2.Size = new System.Drawing.Size(74, 23);
             this.label2.TabIndex = 26;
             this.label2.Text = "Buscar";
             // 
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btnEliminar.Location = new System.Drawing.Point(302, 468);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Location = new System.Drawing.Point(547, 577);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(79, 29);
+            this.btnEliminar.Size = new System.Drawing.Size(105, 36);
             this.btnEliminar.TabIndex = 25;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -94,8 +81,8 @@ namespace CapaDiseño.Encomiendas
             this.dgvBuscar.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBuscar.Location = new System.Drawing.Point(83, 91);
-            this.dgvBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvBuscar.Location = new System.Drawing.Point(111, 112);
+            this.dgvBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvBuscar.MultiSelect = false;
             this.dgvBuscar.Name = "dgvBuscar";
             this.dgvBuscar.ReadOnly = true;
@@ -104,19 +91,19 @@ namespace CapaDiseño.Encomiendas
             this.dgvBuscar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvBuscar.RowTemplate.Height = 24;
             this.dgvBuscar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBuscar.Size = new System.Drawing.Size(740, 343);
+            this.dgvBuscar.Size = new System.Drawing.Size(987, 422);
             this.dgvBuscar.TabIndex = 24;
             // 
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtBuscar.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtBuscar.Location = new System.Drawing.Point(241, 40);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscar.Location = new System.Drawing.Point(321, 49);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBuscar.MaxLength = 10;
             this.txtBuscar.Multiline = true;
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(404, 27);
+            this.txtBuscar.Size = new System.Drawing.Size(537, 32);
             this.txtBuscar.TabIndex = 23;
             this.txtBuscar.Text = "Ingrese el código de una encomienda";
             this.txtBuscar.Enter += new System.EventHandler(this.txtBuscar_Enter);
@@ -124,17 +111,17 @@ namespace CapaDiseño.Encomiendas
             // 
             // BuscarDatosEncomienda
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(906, 532);
-            this.Controls.Add(this.Reporte);
+            this.ClientSize = new System.Drawing.Size(1208, 655);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvBuscar);
             this.Controls.Add(this.txtBuscar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BuscarDatosEncomienda";
             this.Text = "BuscarDatosEncomienda";
             this.Load += new System.EventHandler(this.BuscarDatosEncomienda_Load);
@@ -146,8 +133,6 @@ namespace CapaDiseño.Encomiendas
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Reporte;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEliminar;
