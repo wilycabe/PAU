@@ -10,27 +10,15 @@ C:\Users\lives\source\repos\wilycabe\PAU\CapaLogica\bin\Debug\CapaBase.dll
 C:\Users\lives\source\repos\wilycabe\PAU\CapaLogica\bin\Debug\CapaBase.pdb
 C:\Users\lives\source\repos\wilycabe\PAU\CapaLogica\bin\Debug\CapaBase.dll.config
 C:\Users\lives\source\repos\wilycabe\PAU\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
-C:\Users\andy_\OneDrive\Desktop\PAU\PAU\CapaLogica\bin\Debug\PAU.mdf
-C:\Users\andy_\OneDrive\Desktop\PAU\PAU\CapaLogica\bin\Debug\PAU_log.ldf
-C:\Users\andy_\OneDrive\Desktop\PAU\PAU\CapaLogica\bin\Debug\CapaLogica.dll
-C:\Users\andy_\OneDrive\Desktop\PAU\PAU\CapaLogica\bin\Debug\CapaLogica.pdb
-C:\Users\andy_\OneDrive\Desktop\PAU\PAU\CapaLogica\bin\Debug\CapaBase.dll
-C:\Users\andy_\OneDrive\Desktop\PAU\PAU\CapaLogica\bin\Debug\CapaBase.pdb
-C:\Users\andy_\OneDrive\Desktop\PAU\PAU\CapaLogica\bin\Debug\CapaBase.dll.config
-C:\Users\andy_\OneDrive\Desktop\PAU\PAU\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
-C:\Users\andy_\OneDrive\Desktop\PAU\PAU\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
-C:\Users\andy_\OneDrive\Desktop\PAU\PAU\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
-C:\Users\andy_\OneDrive\Desktop\PAU\PAU\CapaLogica\obj\Debug\CapaLogica.dll
-C:\Users\andy_\OneDrive\Desktop\PAU\PAU\CapaLogica\obj\Debug\CapaLogica.pdb
-C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaLogica\bin\Debug\PAU.mdf
-C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaLogica\bin\Debug\PAU_log.ldf
-C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaLogica\bin\Debug\CapaLogica.dll
-C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaLogica\bin\Debug\CapaLogica.pdb
-C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaLogica\bin\Debug\CapaBase.dll
-C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaLogica\bin\Debug\CapaBase.pdb
-C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaLogica\bin\Debug\CapaBase.dll.config
-C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
-C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
-C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
-C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaLogica\obj\Debug\CapaLogica.dll
-C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\wilyc\Desktop\Nueva carpeta\PAU\CapaLogica\bin\Debug\PAU.mdf
+C:\Users\wilyc\Desktop\Nueva carpeta\PAU\CapaLogica\bin\Debug\PAU_log.ldf
+C:\Users\wilyc\Desktop\Nueva carpeta\PAU\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\wilyc\Desktop\Nueva carpeta\PAU\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\wilyc\Desktop\Nueva carpeta\PAU\CapaLogica\bin\Debug\CapaBase.dll
+C:\Users\wilyc\Desktop\Nueva carpeta\PAU\CapaLogica\bin\Debug\CapaBase.pdb
+C:\Users\wilyc\Desktop\Nueva carpeta\PAU\CapaLogica\bin\Debug\CapaBase.dll.config
+C:\Users\wilyc\Desktop\Nueva carpeta\PAU\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+C:\Users\wilyc\Desktop\Nueva carpeta\PAU\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\wilyc\Desktop\Nueva carpeta\PAU\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\wilyc\Desktop\Nueva carpeta\PAU\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\wilyc\Desktop\Nueva carpeta\PAU\CapaLogica\obj\Debug\CapaLogica.pdb

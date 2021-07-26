@@ -12,24 +12,6 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>D:\REPOSITORIOS\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ProductName>PAU</ProductName>
-    <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <CreateDesktopShortcut>true</CreateDesktopShortcut>
-    <PublishWizardCompleted>true</PublishWizardCompleted>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -49,18 +31,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestCertificateThumbprint>E3C22EB5AEF7DE0CF73BC9EDD23BE8FFB664228A</ManifestCertificateThumbprint>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestKeyFile>CapaDiseño_TemporaryKey.pfx</ManifestKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
@@ -109,7 +79,16 @@
     <Compile Include="CuadroLogin.Designer.cs">
       <DependentUpon>CuadroLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\Form Reportes Secundarios\DataSetPrincipal.Designer.cs" />
+    <Compile Include="PAUDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PAUDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Form Reportes Secundarios\DataSetPrincipal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPrincipal.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\Form Reportes Secundarios\FormReporteChofer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -338,6 +317,7 @@
     <EmbeddedResource Include="Reportes\Form Reportes Secundarios\FormReporteVechiculos.resx">
       <DependentUpon>FormReporteVechiculos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RDLC\Chofer.rdlc" />
     <EmbeddedResource Include="Reportes\FormReportes.resx">
       <DependentUpon>FormReportes.cs</DependentUpon>
     </EmbeddedResource>
@@ -357,14 +337,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reportes\RDLC\Chofer.rdlc" />
     <EmbeddedResource Include="Reportes\RDLC\Cliente.rdlc" />
-    <EmbeddedResource Include="Reportes\RDLC\Destinatario.rdlc" />
-    <EmbeddedResource Include="Reportes\RDLC\Encomienda_Pen.rdlc" />
     <EmbeddedResource Include="Reportes\RDLC\Encomienda_Rea.rdlc" />
+    <EmbeddedResource Include="Reportes\RDLC\Encomienda_Pen.rdlc" />
     <EmbeddedResource Include="Reportes\RDLC\Reservacion.rdlc" />
     <EmbeddedResource Include="Reportes\RDLC\Usuario.rdlc" />
     <EmbeddedResource Include="Reportes\RDLC\Vehiculo.rdlc" />
+    <EmbeddedResource Include="Reportes\RDLC\Destinatario.rdlc" />
     <EmbeddedResource Include="Viajes\AgendaDeViaje.resx">
       <DependentUpon>AgendaDeViaje.cs</DependentUpon>
     </EmbeddedResource>
@@ -377,8 +356,18 @@
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="CapaDiseño_TemporaryKey.pfx" />
     <None Include="packages.config" />
+    <None Include="PAUDataSet.xsc">
+      <DependentUpon>PAUDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PAUDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PAUDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PAUDataSet.xss">
+      <DependentUpon>PAUDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\DataSources\CapaBase.Conexion.datasource" />
     <None Include="Properties\DataSources\CapaBase.Operaciones.datasource" />
     <None Include="Properties\DataSources\CapaBase.PAUDataSet+choferDataTable.datasource" />
@@ -409,7 +398,7 @@
     <None Include="Reportes\Form Reportes Secundarios\DataSetPrincipal.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetPrincipal1.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSetPrincipal.Designer.cs</LastGenOutput>
     </None>
     <None Include="Reportes\Form Reportes Secundarios\DataSetPrincipal.xss">
       <DependentUpon>DataSetPrincipal.xsd</DependentUpon>
@@ -501,32 +490,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.7">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7 %28x86 y x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.NetCore.CoreRuntime.3.1.x64">
-      <Visible>False</Visible>
-      <ProductName>.NET Core Runtime 3.1.16 %28x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.NetCore.CoreRuntime.3.1.x86">
-      <Visible>False</Visible>
-      <ProductName>.NET Core Runtime 3.1.16 %28x86%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.15.0">
-      <Visible>False</Visible>
-      <ProductName>SQL Server 2019 Express LocalDB</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
