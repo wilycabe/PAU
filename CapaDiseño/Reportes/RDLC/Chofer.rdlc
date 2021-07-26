@@ -6,7 +6,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.11491cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -15,16 +15,16 @@
               <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.22483cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.35183cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.33067cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.39417cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -532,9 +532,9 @@
         </TablixRowHierarchy>
         <DataSetName>DSChofer</DataSetName>
         <Top>0.7112cm</Top>
-        <Left>0.60537cm</Left>
+        <Left>0.26904cm</Left>
         <Height>1.2cm</Height>
-        <Width>17.5cm</Width>
+        <Width>16.41641cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -545,7 +545,7 @@
     <Height>0.88333in</Height>
     <Style />
   </Body>
-  <Width>7.15in</Width>
+  <Width>6.60833in</Width>
   <Page>
     <PageHeader>
       <Height>2.43417cm</Height>

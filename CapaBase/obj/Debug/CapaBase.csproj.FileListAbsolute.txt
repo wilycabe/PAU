@@ -25,3 +25,12 @@ C:\Users\wilyc\Desktop\Nueva carpeta\PAU\CapaBase\obj\Debug\CapaBase.csproj.Asse
 C:\Users\wilyc\Desktop\Nueva carpeta\PAU\CapaBase\obj\Debug\CapaBase.csproj.CoreCompileInputs.cache
 C:\Users\wilyc\Desktop\Nueva carpeta\PAU\CapaBase\obj\Debug\CapaBase.dll
 C:\Users\wilyc\Desktop\Nueva carpeta\PAU\CapaBase\obj\Debug\CapaBase.pdb
+C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaBase\bin\Debug\PAU.mdf
+C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaBase\bin\Debug\PAU_log.ldf
+C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaBase\bin\Debug\CapaBase.dll.config
+C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaBase\bin\Debug\CapaBase.dll
+C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaBase\bin\Debug\CapaBase.pdb
+C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaBase\obj\Debug\CapaBase.csproj.AssemblyReference.cache
+C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaBase\obj\Debug\CapaBase.csproj.CoreCompileInputs.cache
+C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaBase\obj\Debug\CapaBase.dll
+C:\Users\wilyc\Desktop\PAU_falta reportes y un par de cosas\PAU\PAU\CapaBase\obj\Debug\CapaBase.pdb
