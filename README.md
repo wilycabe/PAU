@@ -1,2 +1,2 @@
 # PAU
-Segundo trabajo en grupo de Aplicaciones Informáticas Segundo Parcial
+Trabajo en grupo de Requisitos de software
